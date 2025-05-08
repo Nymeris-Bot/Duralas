@@ -1,3 +1,5 @@
+/* Responsive BDY CSS with mobile support */
+
 @import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
 
 @font-face {
@@ -17,12 +19,13 @@ body {
 
 .BDY {
   margin: auto;
-  width: 500px;
+  max-width: 500px;
+  width: 90%;
   text-align: center;
   line-height: 16px;
   font-family: inherit;
   position: relative;
-  padding-top: -120px;
+  padding-top: 0;
   padding-bottom: 100px;
 }
 
@@ -42,7 +45,7 @@ body {
 }
 
 .topBDY {
-  width: 500px;
+  width: 100%;
   height: 10px;
 }
 
@@ -140,7 +143,7 @@ body {
   z-index: 1;
   font-family: 'Caudex', serif;
   margin: auto;
-  width: 460px;
+  width: 100%;
   min-height: 205px;
   padding: 10px;
   border-radius: 0 0 15px 15px;
@@ -180,23 +183,22 @@ body {
   font-size: 22px;
 }
 
-.jawTopBDY {
+.jawTopBDY,
+.jawBottomBDY {
   position: absolute;
-  top: -60px;
   left: 0;
   width: 100%;
   z-index: 11;
   animation: fadeInJaw 1s ease both;
+}
+
+.jawTopBDY {
+  top: -60px;
   animation-delay: 0.2s;
 }
 
 .jawBottomBDY {
-  position: absolute;
   bottom: -40px;
-  left: 0;
-  width: 100%;
-  z-index: 11;
-  animation: fadeInJaw 1s ease both;
   animation-delay: 0.5s;
 }
 
@@ -220,10 +222,32 @@ body {
 }
 
 @keyframes heartBeat {
-  0%   { transform: translate(-50%, -50%) scale(1); }
-  20%  { transform: translate(-50%, -50%) scale(1.08); }
-  40%  { transform: translate(-50%, -50%) scale(0.95); }
-  60%  { transform: translate(-50%, -50%) scale(1.05); }
-  80%  { transform: translate(-50%, -50%) scale(0.97); }
-  100% { transform: translate(-50%, -50%) scale(1); }
+  0%   { transform: scale(1); }
+  20%  { transform: scale(1.08); }
+  40%  { transform: scale(0.95); }
+  60%  { transform: scale(1.05); }
+  80%  { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+  .BDY {
+    width: 95%;
+    padding: 20px 10px;
+  }
+
+  .splashBDY,
+  .cdtBDY,
+  .ftBDY::before {
+    display: none;
+  }
+
+  .tleBDY {
+    font-size: 16px;
+  }
+
+  .msgBDY {
+    font-size: 11px;
+    padding: 8px;
+  }
 }
