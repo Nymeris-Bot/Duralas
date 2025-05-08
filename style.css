@@ -64,7 +64,6 @@ body {
   border-radius: 75px;
 }
 
-/* TACHE DE SANG – SANS ANIMATION */
 .ftBDY::before {
   content: "";
   position: absolute;
@@ -124,7 +123,6 @@ body {
 
 .msgBDY {
   position: relative;
-  z-index: 10;
   font-family: 'Caudex', serif;
   margin: auto;
   width: 460px;
@@ -135,10 +133,10 @@ body {
   font-size: 12px;
   text-align: justify;
   color: #f5deb3;
-  overflow: hidden;
+  z-index: 2;
 }
 
-/* CŒUR CENTRÉ DERRIÈRE LE TEXTE */
+/* Cœur derrière le texte */
 .msgBDY::before {
   content: "";
   position: absolute;
@@ -150,18 +148,9 @@ body {
   background-size: contain;
   transform: translate(-50%, -50%);
   opacity: 0.15;
-  pointer-events: none;
   z-index: 0;
+  pointer-events: none;
   animation: heartBeat 1.5s infinite;
-}
-
-@keyframes heartBeat {
-  0%   { transform: translate(-50%, -50%) scale(1); }
-  20%  { transform: translate(-50%, -50%) scale(1.08); }
-  40%  { transform: translate(-50%, -50%) scale(0.95); }
-  60%  { transform: translate(-50%, -50%) scale(1.05); }
-  80%  { transform: translate(-50%, -50%) scale(0.97); }
-  100% { transform: translate(-50%, -50%) scale(1); }
 }
 
 .msgBDY p {
@@ -175,8 +164,6 @@ body {
   font-family: 'Perigord', serif;
   font-size: 22px;
 }
-
-/* MACHOIRES */
 
 .jawTopBDY {
   position: absolute;
@@ -215,4 +202,13 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes heartBeat {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  20%  { transform: translate(-50%, -50%) scale(1.08); }
+  40%  { transform: translate(-50%, -50%) scale(0.95); }
+  60%  { transform: translate(-50%, -50%) scale(1.05); }
+  80%  { transform: translate(-50%, -50%) scale(0.97); }
+  100% { transform: translate(-50%, -50%) scale(1); }
 }
