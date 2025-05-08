@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'Perigord';
-  src: url('https://hakkon-bot.github.io/CSS-Duralas/Perigord.woff2') format('woff2'),
-       url('https://hakkon-bot.github.io/CSS-Duralas/Perigord.woff') format('woff');
+  src: url('https://nymeris-bot.github.io/CSS-Duralas/Perigord.woff2') format('woff2'),
+       url('https://nymeris-bot.github.io/CSS-Duralas/Perigord.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -75,7 +75,7 @@ body {
   width: 363px;
   height: 259px;
   transform: translate(-50%, -50%);
-  background: url('https://hakkon-bot.github.io/CSS-Duralas/BackBlood1.png') no-repeat center center;
+  background: url('https://nymeris-bot.github.io/CSS-Duralas/BackBlood1.png') no-repeat center center;
   background-size: contain;
   z-index: -1;
   pointer-events: none;
