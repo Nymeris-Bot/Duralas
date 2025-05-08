@@ -25,6 +25,7 @@ body {
   padding-top: -120px;
   padding-bottom: 100px;
   z-index: 1;
+  min-height: 600px;
 }
 
 /* ❤️ COEUR CENTRÉ DERRIÈRE LE TEXTE */
@@ -90,7 +91,7 @@ body {
   border-radius: 75px;
 }
 
-/* 🩸 TACHE DE SANG – SANS ANIMATION */
+/* 🩸 TACHE DE SANG DERRIÈRE L’ICÔNE */
 .ftBDY::before {
   content: "";
   position: absolute;
