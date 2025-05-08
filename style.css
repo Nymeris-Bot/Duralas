@@ -38,6 +38,8 @@ body {
   margin-top: -15px;
   width: 363px;
   height: 259px;
+  background: url('https://nymeris-bot.github.io/Duralas/BackBlood1.png') no-repeat center center;
+  background-size: contain;
 }
 
 .cdtBDY {
@@ -124,6 +126,7 @@ body {
   font-size: 12px;
   text-align: justify;
   color: #f5deb3;
+  position: relative;
 }
 
 .msgBDY p {
@@ -136,6 +139,31 @@ body {
   color: #660000;
   font-family: 'Perigord', serif;
   font-size: 22px;
+}
+
+/* Ajout du cœur animé */
+.msgBDY::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 80px;
+  height: 100px;
+  background: url('https://nymeris-bot.github.io/Duralas/Heart.png') no-repeat center center;
+  background-size: contain;
+  transform: rotate(35deg);
+  animation: heartBeat 1.5s infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes heartBeat {
+  0%   { transform: rotate(35deg) scale(1); }
+  20%  { transform: rotate(35deg) scale(1.08); }
+  40%  { transform: rotate(35deg) scale(0.95); }
+  60%  { transform: rotate(35deg) scale(1.05); }
+  80%  { transform: rotate(35deg) scale(0.97); }
+  100% { transform: rotate(35deg) scale(1); }
 }
 
 .jawTopBDY {
@@ -175,42 +203,4 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* IMAGE COEUR EN BAS A DROITE */
-.heartDecor {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 80px;
-  height: auto;
-  transform: rotate(35deg);
-  z-index: 1;
-  animation: heartBeat 1.5s infinite;
-}
-
-@keyframes heartBeat {
-  0% {
-    transform: rotate(35deg) scale(1);
-  }
-  20% {
-    transform: rotate(35deg) scale(1.08);
-  }
-  40% {
-    transform: rotate(35deg) scale(0.95);
-  }
-  60% {
-    transform: rotate(35deg) scale(1.05);
-  }
-  80% {
-    transform: rotate(35deg) scale(0.97);
-  }
-  100% {
-    transform: rotate(35deg) scale(1);
-  }
-}
-
-/* Suppression de l'ancienne animation */
-.ftBDY::before {
-  display: none;
 }
