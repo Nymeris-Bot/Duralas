@@ -26,7 +26,7 @@ body {
   padding-bottom: 100px;
 }
 
-/* CŒUR CENTRÉ DERRIÈRE LE TEXTE */
+/* CŒUR CENTRÉ EN FOND */
 .BDY::after {
   content: "";
   position: absolute;
@@ -34,22 +34,22 @@ body {
   left: 50%;
   width: 120px;
   height: 120px;
+  transform: translate(-50%, -50%) rotate(35deg);
   background: url('https://nymeris-bot.github.io/Duralas/Heart.png') no-repeat center center;
   background-size: contain;
-  transform: translate(-50%, -50%);
-  opacity: 0.15;
   z-index: 0;
   pointer-events: none;
   animation: heartBeat 1.5s infinite;
+  opacity: 0.15;
 }
 
 @keyframes heartBeat {
-  0%   { transform: translate(-50%, -50%) scale(1); }
-  20%  { transform: translate(-50%, -50%) scale(1.08); }
-  40%  { transform: translate(-50%, -50%) scale(0.95); }
-  60%  { transform: translate(-50%, -50%) scale(1.05); }
-  80%  { transform: translate(-50%, -50%) scale(0.97); }
-  100% { transform: translate(-50%, -50%) scale(1); }
+  0%   { transform: translate(-50%, -50%) rotate(35deg) scale(1); }
+  20%  { transform: translate(-50%, -50%) rotate(35deg) scale(1.08); }
+  40%  { transform: translate(-50%, -50%) rotate(35deg) scale(0.95); }
+  60%  { transform: translate(-50%, -50%) rotate(35deg) scale(1.05); }
+  80%  { transform: translate(-50%, -50%) rotate(35deg) scale(0.97); }
+  100% { transform: translate(-50%, -50%) rotate(35deg) scale(1); }
 }
 
 .topBDY {
@@ -158,6 +158,8 @@ body {
   font-size: 12px;
   text-align: justify;
   color: #f5deb3;
+  position: relative;
+  z-index: 2;
 }
 
 .msgBDY p {
