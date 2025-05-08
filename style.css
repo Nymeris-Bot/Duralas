@@ -81,7 +81,7 @@ body {
 .ftBDY::before {
   content: "";
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 140%;
   width: 363px;
   height: 259px;
