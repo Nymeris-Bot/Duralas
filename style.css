@@ -24,23 +24,32 @@ body {
   position: relative;
   padding-top: -120px;
   padding-bottom: 100px;
-  z-index: 1;
 }
 
-.BDY::before {
+/* CŒUR CENTRÉ DERRIÈRE LE TEXTE */
+.BDY::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 150px;
-  height: 150px;
-  transform: translate(-50%, -50%) rotate(35deg);
+  width: 120px;
+  height: 120px;
   background: url('https://nymeris-bot.github.io/Duralas/Heart.png') no-repeat center center;
   background-size: contain;
-  opacity: 0.25;
+  transform: translate(-50%, -50%);
+  opacity: 0.15;
   z-index: 0;
   pointer-events: none;
   animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  20%  { transform: translate(-50%, -50%) scale(1.08); }
+  40%  { transform: translate(-50%, -50%) scale(0.95); }
+  60%  { transform: translate(-50%, -50%) scale(1.05); }
+  80%  { transform: translate(-50%, -50%) scale(0.97); }
+  100% { transform: translate(-50%, -50%) scale(1); }
 }
 
 .topBDY {
@@ -63,14 +72,11 @@ body {
   margin-top: 120px;
   margin-left: -140px;
   transform: scale(0);
-  -webkit-transform: scale(0);
   transition: transform ease-in-out 0.55s;
-  -webkit-transition: -webkit-transform ease-in-out 0.55s;
 }
 
 .BDY:hover .cdtBDY {
   transform: scale(1);
-  -webkit-transform: scale(1);
 }
 
 .ftBDY {
@@ -83,19 +89,31 @@ body {
   border-radius: 75px;
 }
 
+/* TACHE DE SANG – SANS ANIMATION */
+.ftBDY::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 140%;
+  width: 363px;
+  height: 259px;
+  transform: translate(-50%, -50%);
+  background: url('https://nymeris-bot.github.io/Duralas/BackBlood1.png') no-repeat center center;
+  background-size: contain;
+  z-index: -1;
+  pointer-events: none;
+}
+
 .ftBDY img {
   width: 75px;
   height: 75px;
   border-radius: 75px;
   transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
   transition: all ease 1s;
-  -webkit-transition: all ease 1s;
 }
 
 .ftBDY:hover img {
   transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
 }
 
 .ftBDY div {
@@ -109,10 +127,9 @@ body {
   font-size: 10px;
   line-height: 14px;
   opacity: 0;
-  transition: all linear 1s;
-  -webkit-transition: all linear 1s;
   background: rgba(0, 0, 0, 0.4);
   color: white;
+  transition: all linear 1s;
 }
 
 .ftBDY:hover div {
@@ -141,8 +158,6 @@ body {
   font-size: 12px;
   text-align: justify;
   color: #f5deb3;
-  position: relative;
-  z-index: 2;
 }
 
 .msgBDY p {
@@ -156,6 +171,8 @@ body {
   font-family: 'Perigord', serif;
   font-size: 22px;
 }
+
+/* MACHOIRES */
 
 .jawTopBDY {
   position: absolute;
@@ -193,51 +210,5 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes pulseDecor {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.9;
-  }
-  14% {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 1;
-  }
-  28% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  42% {
-    transform: translate(-50%, -50%) scale(1.08);
-  }
-  70% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.95;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.9;
-  }
-}
-
-@keyframes heartBeat {
-  0% {
-    transform: translate(-50%, -50%) rotate(35deg) scale(1);
-  }
-  20% {
-    transform: translate(-50%, -50%) rotate(35deg) scale(1.08);
-  }
-  40% {
-    transform: translate(-50%, -50%) rotate(35deg) scale(0.95);
-  }
-  60% {
-    transform: translate(-50%, -50%) rotate(35deg) scale(1.05);
-  }
-  80% {
-    transform: translate(-50%, -50%) rotate(35deg) scale(0.97);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(35deg) scale(1);
   }
 }
