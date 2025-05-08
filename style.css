@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
+
+@font-face {
+  font-family: 'Perigord';
+  src: url('https://hakkon-bot.github.io/CSS-Duralas/Perigord.woff2') format('woff2'),
+       url('https://hakkon-bot.github.io/CSS-Duralas/Perigord.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Caudex', serif;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+.BDY {
+  margin: auto;
+  width: 500px;
+  text-align: center;
+  line-height: 16px;
+  font-family: inherit;
+  position: relative;
+  padding-top: -120px;
+  padding-bottom: 100px;
+}
+
+.topBDY {
+  width: 500px;
+  height: 10px;
+}
+
+.splashBDY {
+  position: absolute;
+  z-index: 1;
+  margin-left: -65px;
+  margin-top: -15px;
+  width: 363px;
+  height: 259px;
+}
+
+.cdtBDY {
+  position: absolute;
+  z-index: 3;
+  margin-top: 120px;
+  margin-left: -140px;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  transition: transform ease-in-out 0.55s;
+  -webkit-transition: -webkit-transform ease-in-out 0.55s;
+}
+
+.BDY:hover .cdtBDY {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.ftBDY {
+  position: absolute;
+  z-index: 2;
+  margin-top: -60px;
+  margin-left: 40px;
+  width: 75px;
+  height: 75px;
+  border-radius: 75px;
+}
+
+/* Image décorative derrière l'icône */
+.ftBDY::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 165%;
+  width: 363px;
+  height: 259px;
+  transform: translate(-50%, -50%);
+  background: url('https://hakkon-bot.github.io/CSS-Duralas/BackBlood1.png') no-repeat center center;
+  background-size: contain;
+  z-index: -1;
+  pointer-events: none;
+  animation: pulseDecor 4s ease-in-out infinite;
+}
+
+.ftBDY img {
+  width: 75px;
+  height: 75px;
+  border-radius: 75px;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transition: all ease 1s;
+  -webkit-transition: all ease 1s;
+}
+
+.ftBDY:hover img {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+
+.ftBDY div {
+  position: absolute;
+  margin-top: -87px;
+  width: 75px;
+  height: 62px;
+  padding-top: 6px;
+  text-align: center;
+  border-radius: 75px;
+  font-size: 10px;
+  line-height: 14px;
+  opacity: 0;
+  transition: all linear 1s;
+  -webkit-transition: all linear 1s;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.ftBDY:hover div {
+  opacity: 1;
+}
+
+.tleBDY {
+  font-family: 'Perigord', serif;
+  margin-top: -80px;
+  margin-bottom: -30px;
+  padding: 15px 0;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #f5deb3;
+}
+
+.msgBDY {
+  font-family: 'Caudex', serif;
+  margin: auto;
+  width: 460px;
+  min-height: 205px;
+  padding: 10px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.2);
+  font-size: 12px;
+  text-align: justify;
+  color: #f5deb3;
+}
+
+.msgBDY p {
+  text-indent: 30px;
+  margin: -0.3em 0;
+}
+
+.msgBDY p::first-letter {
+  text-transform: uppercase;
+  color: #660000;
+  font-family: 'Perigord', serif;
+  font-size: 22px;
+}
+
+/* MACHOIRES */
+
+.jawTopBDY {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  animation: fadeInJaw 1s ease both;
+  animation-delay: 0.2s;
+}
+
+.jawBottomBDY {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  animation: fadeInJaw 1s ease both;
+  animation-delay: 0.5s;
+}
+
+.jawTopBDY img,
+.jawBottomBDY img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes fadeInJaw {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation de pulsation douce */
+@keyframes pulseDecor {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.9;
+  }
+}
