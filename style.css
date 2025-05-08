@@ -24,23 +24,24 @@ body {
   position: relative;
   padding-top: -120px;
   padding-bottom: 100px;
+  z-index: 1;
 }
 
-/* CŒUR CENTRÉ EN FOND */
-.BDY::after {
+/* ❤️ COEUR CENTRÉ DERRIÈRE LE TEXTE */
+.BDY::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 120px;
-  height: 120px;
-  transform: translate(-50%, -50%) rotate(35deg);
+  width: 200px;
+  height: 200px;
   background: url('https://nymeris-bot.github.io/Duralas/Heart.png') no-repeat center center;
   background-size: contain;
+  transform: translate(-50%, -50%) rotate(35deg);
+  opacity: 0.12;
   z-index: 0;
   pointer-events: none;
   animation: heartBeat 1.5s infinite;
-  opacity: 0.15;
 }
 
 @keyframes heartBeat {
@@ -89,7 +90,7 @@ body {
   border-radius: 75px;
 }
 
-/* TACHE DE SANG – SANS ANIMATION */
+/* 🩸 TACHE DE SANG – SANS ANIMATION */
 .ftBDY::before {
   content: "";
   position: absolute;
@@ -158,8 +159,6 @@ body {
   font-size: 12px;
   text-align: justify;
   color: #f5deb3;
-  position: relative;
-  z-index: 2;
 }
 
 .msgBDY p {
