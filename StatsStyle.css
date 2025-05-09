@@ -2,19 +2,26 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background: #1b0f17 url('https://nymeris-bot.github.io/Duralas/cadre-vampire.png') center center no-repeat;
-  background-size: cover;
+  background: #1b0f17;
   color: #e8d0c9;
 }
 
+.fiche-cadre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('/mnt/data/3d1cf446-51ce-4c0c-bab1-a97c120d2ecb.png') center center no-repeat;
+  background-size: contain;
+}
+
 .fiche-container {
-  max-width: 700px;
-  margin: 50px auto;
+  max-width: 600px;
   padding: 30px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border: 5px double #8b0000;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 4px double #8b0000;
   border-radius: 15px;
-  box-shadow: 0 0 20px #8b0000;
+  box-shadow: 0 0 15px #8b0000;
 }
 
 .titre {
