@@ -12,7 +12,7 @@ body {
 
 /* Conteneur de la fiche avec l'image cadre en fond */
 .fiche-vampire {
-  background: url('https://nymeris-bot.github.io/Duralas/images/cadre-vampire.webp') no-repeat center center;
+  background: url('https://nymeris-bot.github.io/Duralas/cadre-vampire.webp') no-repeat center center;
   background-size: contain;
   background-repeat: no-repeat;
   padding: 60px 40px;
