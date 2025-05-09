@@ -4,19 +4,25 @@ body {
   font-family: 'Cinzel', serif;
   background: #1b0f17;
   color: #e8d0c9;
-  min-height: 100vh;
+}
+
+.fiche-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  background-color: #0e0b0f;
+  padding: 50px 20px;
 }
 
 .fiche-container {
-  width: 80%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 800px;
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.85);
+  border: 5px double #8b0000;
   border-radius: 15px;
-  box-shadow: 0 0 15px #8b0000;
+  box-shadow: 0 0 25px #8b0000;
 }
 
 .titre {
