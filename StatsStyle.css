@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background: #1b0f17;
+  background: #000;
   color: #e8d0c9;
 }
 
@@ -11,7 +11,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #0e0b0f;
   padding: 50px 20px;
 }
 
@@ -19,27 +18,36 @@ body {
   width: 100%;
   max-width: 800px;
   padding: 30px;
-  background-color: rgba(0, 0, 0, 0.85);
-  border: 5px double #8b0000;
+  background-color: #000;
+  border: 2px solid #d40000;
   border-radius: 15px;
-  box-shadow: 0 0 25px #8b0000;
+  box-shadow: 0 0 20px #d40000;
 }
 
 .titre {
   font-size: 2em;
   text-align: center;
-  color: #d4af37;
+  color: #f1c40f;
   margin-bottom: 20px;
-  text-shadow: 2px 2px #000;
+  background-color: #1a1a0f;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.champ, .capacites em {
+.fiche-stats p {
+  margin: 5px 0;
+}
+
+.champ {
   font-weight: bold;
-  color: #a52a2a;
 }
 
-.fiche-stats strong {
-  color: #f4e1d2;
+.rouge {
+  color: #ff4444;
+}
+
+.jaune {
+  color: #ffcc00;
 }
 
 .capacites {
