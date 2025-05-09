@@ -1,92 +1,68 @@
 body {
-  background-color: #0b0000;
-  font-family: 'Cinzel Decorative', cursive;
-  color: #f2e6dc;
   margin: 0;
-  padding: 2rem;
-  background-image: url('https://nymeris-bot.github.io/Duralas/cadre-vampire.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  padding: 0;
+  font-family: 'Cinzel', serif;
+  background: #1b0f17 url('https://nymeris-bot.github.io/Duralas/cadre-vampire.png') center center no-repeat;
+  background-size: cover;
+  color: #e8d0c9;
 }
 
-.carte {
-  background-color: rgba(0, 0, 0, 0.85);
-  border: 5px solid #8b0000;
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 25px #8b0000;
+.fiche-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 5px double #8b0000;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #8b0000;
 }
 
 .titre {
+  font-size: 2em;
   text-align: center;
-  font-size: 2.5rem;
-  color: #c90c0f;
-  margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 6px black;
+  color: #d4af37;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #000;
 }
 
-strong.humain {
-  color: #cc6666;
-  font-size: 1.3rem;
+.champ, .capacites em {
+  font-weight: bold;
+  color: #a52a2a;
 }
 
-strong.vitalité {
-  color: #e60000;
+.fiche-stats strong {
+  color: #f4e1d2;
+}
+
+.capacites {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.capacite_speciale {
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.capacite_speciale.imblocable {
+  color: #ff5555;
   font-weight: bold;
 }
 
-.bestiaire-champ {
-  display: inline-block;
-  width: 120px;
-  color: #d6bebe;
-  font-style: italic;
+.capacite_speciale.active {
+  color: #ffcc00;
 }
 
-strong.vitesse,
-strong.dégâts {
-  color: #fff3cd;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-top: 1rem;
-}
-
-.capacité_spéciale {
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  background-color: #1e0d0d;
-  border-left: 4px solid #8b0000;
-  border-radius: 4px;
-}
-
-.capacité_spéciale.imblocable {
-  background-color: #3b0a0a;
-  border-color: #b30000;
-}
-
-.capacité_spéciale.active {
-  background-color: #0d1a0d;
-  border-color: #006600;
-}
-
-.capacité_spéciale.utilisée {
-  background-color: #2d1e2f;
-  border-color: #663399;
-}
-
-em {
-  font-weight: bold;
-  color: #ffcccc;
+.capacite_speciale.utilisee {
+  color: #8888ff;
+  text-decoration: line-through;
 }
 
 .maj {
+  margin-top: 20px;
   text-align: right;
-  margin-top: 2rem;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   color: #aaa;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
