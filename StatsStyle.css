@@ -1,84 +1,83 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Cinzel', serif;
-  background: #000;
-  color: #e8d0c9;
-}
+/* fiche-stats.css */
 
-.fiche-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 50px 20px;
+body {
+  background-color: #0d0d0d;
+  font-family: 'Cinzel', serif;
+  color: #e6e1dc;
+  margin: 0;
+  padding: 20px;
 }
 
 .fiche-container {
-  width: 100%;
   max-width: 800px;
+  margin: auto;
+  background-color: #1a0f0f;
+  border: 2px solid #800000;
+  border-radius: 12px;
   padding: 30px;
-  background-color: #000;
-  border: 2px solid #d40000;
-  border-radius: 15px;
-  box-shadow: 0 0 20px #d40000;
+  box-shadow: 0 0 20px #4b0000;
 }
 
-.titre {
-  font-size: 2em;
+.fiche-titre {
+  font-size: 2.5rem;
+  color: #b30000;
   text-align: center;
-  color: #f1c40f;
   margin-bottom: 20px;
-  background-color: #1a1a0f;
-  padding: 10px;
-  border-radius: 5px;
+  text-shadow: 0 0 10px #800000;
 }
 
-.fiche-stats p {
-  margin: 5px 0;
+.stat, .capacites {
+  margin: 15px 0;
+  font-size: 1.2rem;
 }
 
-.champ {
+.label {
   font-weight: bold;
+  color: #cc9999;
 }
 
-.rouge {
-  color: #ff4444;
+.valeur {
+  color: #ffffff;
 }
 
-.jaune {
+.vitalite {
+  color: #ff3333;
+}
+
+.vitesse {
+  color: #9999ff;
+}
+
+.degats {
   color: #ffcc00;
 }
 
-.capacites {
+ul {
   list-style-type: square;
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
-.capacite_speciale {
-  margin-bottom: 8px;
-  color: #ccc;
+.capacité_spéciale {
+  margin-bottom: 10px;
 }
 
-.capacite_speciale.imblocable {
-  color: #ff5555;
-  font-weight: bold;
+.capacité_spéciale.imblocable {
+  color: #ff4444;
+  font-style: italic;
 }
 
-.capacite_speciale.active {
-  color: #ffcc00;
+.capacité_spéciale.active {
+  color: #66ff66;
 }
 
-.capacite_speciale.utilisee {
-  color: #8888ff;
+.capacité_spéciale.utilisée {
+  color: #999999;
   text-decoration: line-through;
 }
 
 .maj {
-  margin-top: 20px;
   text-align: right;
-  font-size: 0.9em;
-  color: #aaa;
+  font-style: italic;
+  margin-top: 30px;
+  color: #bbbbbb;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
