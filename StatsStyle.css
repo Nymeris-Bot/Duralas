@@ -10,18 +10,9 @@ body {
   align-items: center;
 }
 
-.fiche-cadre {
-  width: 900px;
-  height: 1200px;
-  background: url('https://nymeris-bot.github.io/Duralas/cadre-vampire.png') center center no-repeat;
-  background-size: 100% 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .fiche-container {
   width: 80%;
+  max-width: 700px;
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.85);
   border-radius: 15px;
