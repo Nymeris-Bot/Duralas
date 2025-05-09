@@ -96,20 +96,6 @@ body {
   border-radius: 75px;
 }
 
-.ftBDY::before {
-  content: "";
-  position: absolute;
-  top: 35%;
-  left: 140%;
-  width: 363px;
-  height: 259px;
-  transform: translate(-50%, -50%);
-  background: url('https://nymeris-bot.github.io/Duralas/BackBlood1.png') no-repeat center center;
-  background-size: contain;
-  z-index: -1;
-  pointer-events: none;
-}
-
 .ftBDY img {
   width: 75px;
   height: 75px;
