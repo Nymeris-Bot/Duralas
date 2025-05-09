@@ -1,113 +1,92 @@
-* Police gothique */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
-
-/* Fond de la page (neutre) */
 body {
-  background-color: #0a0a0a;
-  font-family: 'Cinzel', serif;
-  color: #f5eaea;
+  background-color: #0b0000;
+  font-family: 'Cinzel Decorative', cursive;
+  color: #f2e6dc;
   margin: 0;
-  padding: 40px;
+  padding: 2rem;
+  background-image: url('cadre-vampire.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
-/* Conteneur principal avec image-cadre */
-.fiche-vampire {
-  background: 
-    url('https://nymeris-bot.github.io/Duralas/cadre-vampire.webp') no-repeat center center,
-    rgba(0, 0, 0, 0.85); /* fallback si image ne charge pas */
-  background-size: cover;
-  padding: 60px 40px;
-  max-width: 700px;
+.carte {
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 5px solid #8b0000;
+  padding: 2rem;
+  max-width: 800px;
   margin: auto;
-  border-radius: 16px;
-  box-shadow: 0 0 25px #a00;
-  position: relative;
-  z-index: 1;
-  text-shadow: 1px 1px 2px #000;
-  color: #f8e6e6;
+  border-radius: 10px;
+  box-shadow: 0 0 25px #8b0000;
 }
 
-/* Titre de fiche */
-.banniere h1 {
-  font-size: 2.2em;
+.titre {
   text-align: center;
-  margin-bottom: 10px;
-  color: #c42d47;
-  text-shadow: 0 0 10px #9b111e;
+  font-size: 2.5rem;
+  color: #c90c0f;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 6px black;
 }
 
-/* Vitalité */
-.vitalite {
-  text-align: center;
+strong.humain {
+  color: #cc6666;
+  font-size: 1.3rem;
+}
+
+strong.vitalité {
+  color: #e60000;
   font-weight: bold;
-  color: #ff6666;
-  margin-bottom: 25px;
-  font-size: 1.2em;
 }
 
-/* Statistiques (Vitesse, Dégâts...) */
-.stats-vampire {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 30px;
-  gap: 20px;
-  flex-wrap: wrap;
+.bestiaire-champ {
+  display: inline-block;
+  width: 120px;
+  color: #d6bebe;
+  font-style: italic;
 }
 
-.stat {
-  background: rgba(70, 10, 10, 0.4);
-  padding: 12px 18px;
-  border-radius: 8px;
-  border: 1px solid #a00;
-  text-align: center;
-  font-size: 1.1em;
-  min-width: 120px;
+strong.vitesse,
+strong.dégâts {
+  color: #fff3cd;
 }
 
-/* Capacités */
-.capacites-vampire h2 {
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 1.4em;
-  color: #e0b0b0;
-  border-bottom: 1px solid #a44;
-  padding-bottom: 5px;
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1rem;
 }
 
-.capacites-vampire ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.capacité_spéciale {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: #1e0d0d;
+  border-left: 4px solid #8b0000;
+  border-radius: 4px;
 }
 
-.cap {
-  background: rgba(80, 0, 30, 0.55);
-  padding: 10px 15px;
-  border-left: 5px solid #6c0a1a;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  transition: background 0.3s;
+.capacité_spéciale.imblocable {
+  background-color: #3b0a0a;
+  border-color: #b30000;
 }
 
-.cap:hover {
-  background: rgba(120, 0, 40, 0.75);
+.capacité_spéciale.active {
+  background-color: #0d1a0d;
+  border-color: #006600;
 }
 
-.cap em {
-  font-style: normal;
+.capacité_spéciale.utilisée {
+  background-color: #2d1e2f;
+  border-color: #663399;
+}
+
+em {
   font-weight: bold;
-  color: #fce4ec;
+  color: #ffcccc;
 }
 
-.cap span {
-  display: block;
-  font-size: 0.95em;
-  color: #e4c1c1;
-  margin-top: 4px;
+.maj {
+  text-align: right;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
 }
-
-/* Couleurs spécifiques aux types de capacité */
-.cap.imblocable { border-color: #b30059; }
-.cap.active     { border-color: #6f00b3; }
-.cap.utilisee   { border-color: #1fa463; }
-.cap.tour       { border-color: #b36b00; }
