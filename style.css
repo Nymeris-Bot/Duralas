@@ -1,3 +1,5 @@
+* Responsive BDY CSS with guaranteed visible animated heart background */
+
 @import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
 
 @font-face {
@@ -49,7 +51,7 @@ body {
   right: 0;
   width: 80px;
   height: 80px;
-  background: url('https://nymeris-bot.github.io/Duralas/Heart.png') no-repeat center center;
+  background: url('https://nymeris-bot.github.io/Duralas/Heat.png') no-repeat center center;
   background-size: contain;
   transform: rotate(35deg);
   z-index: 1;
@@ -151,6 +153,21 @@ body {
   color: #f5deb3;
 }
 
+.msgBDY {
+  position: relative;
+  z-index: 1;
+  font-family: 'Caudex', serif;
+  margin: auto;
+  width: 100%;
+  min-height: 205px;
+  padding: 10px;
+  border-radius: 0 0 15px 15px;
+  background: transparent;
+  font-size: 12px;
+  text-align: justify;
+  color: #f5deb3;
+}
+
 .msgBDY p {
   text-indent: 30px;
   margin: -0.3em 0;
@@ -210,15 +227,6 @@ body {
   60%  { transform: scale(1.05); }
   80%  { transform: scale(0.97); }
   100% { transform: scale(1); }
-}
-
-@keyframes heartBeatBG {
-  0%   { background-size: 120px; }
-  20%  { background-size: 130px; }
-  40%  { background-size: 115px; }
-  60%  { background-size: 125px; }
-  80%  { background-size: 117px; }
-  100% { background-size: 120px; }
 }
 
 @media (max-width: 600px) {
