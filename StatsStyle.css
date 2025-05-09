@@ -1,9 +1,7 @@
-/* fiche-stats.css */
-
 body {
   background-color: #000000;
   font-family: 'Cinzel', serif;
-  color: #e6e1dc;
+  color: #d8d8d8;
   margin: 0;
   padding: 20px;
 }
@@ -20,7 +18,7 @@ body {
 
 .fiche-titre {
   font-size: 2.5rem;
-  color: #b30000;
+  color: #cc1a1a;
   text-align: center;
   margin-bottom: 20px;
   text-shadow: 0 0 10px #800000;
@@ -37,19 +35,19 @@ body {
 }
 
 .valeur {
-  color: #ffffff;
+  color: #d8d8d8;
 }
 
 .vitalite {
-  color: #ff3333;
+  color: #d63333;
 }
 
 .vitesse {
-  color: #9999ff;
+  color: #6666cc;
 }
 
 .degats {
-  color: #ffcc00;
+  color: #e6b800;
 }
 
 ul {
@@ -62,16 +60,16 @@ ul {
 }
 
 .capacité_spéciale.imblocable {
-  color: #ff4444;
+  color: #d63333;
   font-style: italic;
 }
 
 .capacité_spéciale.active {
-  color: #66ff66;
+  color: #33cc33;
 }
 
 .capacité_spéciale.utilisée {
-  color: #999999;
+  color: #777777;
   text-decoration: line-through;
 }
 
@@ -79,5 +77,5 @@ ul {
   text-align: right;
   font-style: italic;
   margin-top: 30px;
-  color: #bbbbbb;
+  color: #aaaaaa;
 }
