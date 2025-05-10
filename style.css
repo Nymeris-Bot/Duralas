@@ -263,18 +263,22 @@ body {
   }
 }
 
+/* ✅ Bloc pour encadrer une phrase dans une image */
 .encadrementPhrase {
   position: relative;
-  width: 100%;
-  max-width: 600px; /* ou selon la taille de l'image */
+  width: fit-content;
+  max-width: 90%;
   margin: 20px auto;
   text-align: center;
+  display: inline-block;
 }
 
 .cadreDecoratif {
   width: 100%;
   height: auto;
   display: block;
+  max-width: 400px;
+  border-radius: 10px;
 }
 
 .texteSurImage {
@@ -282,9 +286,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ffffff; /* couleur du texte */
-  font-size: 18px;
-  font-weight: bold;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  max-width: 90%;
+  line-height: 1.4;
+  font-family: 'Caudex', serif;
 }
-
