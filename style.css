@@ -34,6 +34,7 @@ body {
   right: 0;
   width: 80px;
   height: 80px;
+  background: url('https://nymeris-bot.github.io/Duralas/Heart.png') no-repeat center center;
   background: url('https://nymeris-bot.github.io/Duralas/Heat.png') no-repeat center center;
   background-size: contain;
   transform: rotate(35deg);
@@ -261,37 +262,4 @@ body {
     font-size: 11px;
     padding: 8px;
   }
-}
-
-/* ✅ Bloc pour encadrer une phrase dans une image */
-.encadrementPhrase {
-  position: relative;
-  width: fit-content;
-  max-width: 90%;
-  margin: 20px auto;
-  text-align: center;
-  display: inline-block;
-}
-
-.cadreDecoratif {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: 400px;
-  border-radius: 10px;
-}
-
-.texteSurImage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: normal;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  max-width: 90%;
-  line-height: 1.4;
-  font-family: 'Caudex', serif;
 }
