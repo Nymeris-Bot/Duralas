@@ -1,0 +1,68 @@
+#cadre-presentation {
+  width: 450px;
+  overflow: hidden;
+}
+
+#cadre-presentation .image {
+  height: 200px;
+  background-position: center right;
+  border: 4px solid #00000060;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+}
+
+#cadre-presentation:hover .image {
+  background-position: center left;
+  transition: all 0.5s ease-in-out;
+}
+
+#cadre-presentation .infos {
+  width: 90px;
+  height: 100%;
+  background: #000000b8;
+  border-left: 4px solid #8ea09f;
+  border-right: 3px solid #000;
+  background-clip: padding-box;
+  box-sizing: border-box;
+  margin: 0;
+  float: left;
+  color: #fff;
+  writing-mode: vertical-rl;
+  padding: 0 20px;
+  position: relative;
+  left: -100px;
+  transition: all 0.4s ease-in-out;
+}
+
+#cadre-presentation .infos b {
+  display: block;
+  font: 900 35px/20px Kanit;
+  text-transform: uppercase;
+}
+
+#cadre-presentation .infos i {
+  font: 9px/10px Verdana;
+  display: block;
+  height: 85%;
+  padding: 9px;
+  opacity: 0.5;
+}
+
+#cadre-presentation:hover .infos {
+  left: 0;
+  transition: all 0.4s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+#cadre-presentation:after {
+  content: "「@」";
+  font: bold 8px/12px Consolas;
+  color: #8e8e8e;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  opacity: 0.3;
+}
+
+#cadre-presentation:hover::after {
+  content: "「Nymeris」";
+}
