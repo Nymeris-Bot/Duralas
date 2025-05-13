@@ -1,64 +1,62 @@
 body {
-  background: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
-  font-family: sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  scroll-behavior: smooth;
 }
 
-.book {
-  width: 600px;
-  height: 400px;
-  perspective: 2000px;
+.container {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.couverture {
   position: relative;
 }
 
-.page {
+.couverture img,
+.corps img {
   width: 100%;
-  height: 100%;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.bouton-scroll {
   position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: left;
-  transition: transform 1s ease;
-  backface-visibility: hidden;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.page img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.cover {
-  z-index: 3;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
 }
 
-.page-toggle {
-  display: none;
+.page-effet {
+  perspective: 1200px;
 }
 
-.page-toggle:checked + .cover {
-  transform: rotateY(-180deg);
-  z-index: 1;
+.corps {
+  transform-origin: left;
+  animation: pageTurn 1s ease-in-out forwards;
 }
 
-.page-toggle:checked ~ .back {
-  z-index: 2;
-}
-
-.back {
-  background: white;
-  z-index: 1;
-}
-
-.inside {
-  background: white;
-  transform: rotateY(-180deg);
-  z-index: 0;
+@keyframes pageTurn {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
 }
