@@ -1,62 +1,62 @@
 body {
+  background-color: #111;
   margin: 0;
-  background: #f4f4f4;
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  scroll-behavior: smooth;
+  justify-content: center;
 }
 
-.container {
+.livreDura {
+  width: 600px;
+  height: auto;
+  position: relative;
+  perspective: 1500px;
+}
+
+.toggleDura {
+  display: none;
+}
+
+.pageDura {
+  position: absolute;
   width: 100%;
-  max-width: 800px;
-  background: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  backface-visibility: hidden;
+  border-radius: 1rem;
   overflow: hidden;
 }
 
-.couverture {
-  position: relative;
-}
-
-.couverture img,
-.corps img {
-  width: 100%;
+.pageDura img {
   display: block;
-  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
 }
 
-.bouton-scroll {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  background: #222;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
+.couvertureDura {
+  z-index: 3;
+  transform: rotateY(0deg);
+}
+.corps1Dura,
+.corps2Dura {
+  transform: rotateY(-180deg);
 }
 
-.page-effet {
-  perspective: 1200px;
+/* Interactions */
+
+#page1Dura:checked ~ .couvertureDura {
+  transform: rotateY(180deg);
+}
+#page1Dura:checked ~ .corps1Dura {
+  transform: rotateY(0deg);
+  z-index: 2;
 }
 
-.corps {
-  transform-origin: left;
-  animation: pageTurn 1s ease-in-out forwards;
+#page2Dura:checked ~ .corps1Dura {
+  transform: rotateY(180deg);
 }
-
-@keyframes pageTurn {
-  from {
-    transform: rotateY(90deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotateY(0deg);
-    opacity: 1;
-  }
+#page2Dura:checked ~ .corps2Dura {
+  transform: rotateY(0deg);
+  z-index: 1;
 }
