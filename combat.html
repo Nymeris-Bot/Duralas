@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Calculateur de Fiche de Combat</title>
+<link rel="stylesheet" href="StatsStyle.css">
+<style>
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.controls label {
+    margin-right: 10px;
+}
+select {
+    padding: 5px;
+    margin: 0 5px;
+    background: #222;
+    color: #fff;
+    border: 1px solid #555;
+}
+button {
+    padding: 5px 10px;
+    background: #800000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="fiche-container">
+  <h1 class="fiche-titre">Fiche de Combat</h1>
+  <div class="controls">
+    <label for="race">Race :</label>
+    <select id="race">
+      <option value="humain">Humain</option>
+      <option value="elfe">Elfe</option>
+      <option value="nain">Nain</option>
+      <option value="orc">Orc</option>
+    </select>
+    <label for="classe">Classe :</label>
+    <select id="classe">
+      <option value="guerrier">Guerrier</option>
+      <option value="mage">Mage</option>
+      <option value="voleur">Voleur</option>
+    </select>
+    <label for="arme">Arme :</label>
+    <select id="arme">
+      <option value="epee">Epée</option>
+      <option value="arc">Arc</option>
+      <option value="baguette">Baguette</option>
+    </select>
+    <button onclick="calculer()">Calculer</button>
+  </div>
+  <div id="resultats">
+    <div class="stat"><span class="label">PV :</span> <span id="pv" class="valeur vitalite">0</span></div>
+    <div class="stat"><span class="label">Vitesse :</span> <span id="vitesse" class="valeur vitesse">0</span></div>
+    <div class="stat"><span class="label">Dégâts :</span> <span id="degats" class="valeur degats">0</span></div>
+  </div>
+</div>
+<script>
+const bases = {
+  humain: {pv: 100, vit: 100, dmg: 100},
+  elfe: {pv: 80, vit: 120, dmg: 90},
+  nain: {pv: 120, vit: 80, dmg: 100},
+  orc: {pv: 140, vit: 70, dmg: 110}
+};
+const classes = {
+  guerrier: {pv: 20, vit: 0, dmg: 20},
+  mage: {pv: -10, vit: 0, dmg: 30},
+  voleur: {pv: 0, vit: 20, dmg: 10}
+};
+const armes = {
+  epee: {pv:0, vit:0, dmg:10},
+  arc: {pv:0, vit:10, dmg:5},
+  baguette: {pv:0, vit:0, dmg:15}
+};
+function calculer() {
+  const race = document.getElementById('race').value;
+  const classe = document.getElementById('classe').value;
+  const arme = document.getElementById('arme').value;
+  const base = bases[race];
+  const modClasse = classes[classe];
+  const modArme = armes[arme];
+  const pv = base.pv + modClasse.pv + modArme.pv;
+  const vit = base.vit + modClasse.vit + modArme.vit;
+  const dmg = base.dmg + modClasse.dmg + modArme.dmg;
+  document.getElementById('pv').textContent = pv;
+  document.getElementById('vitesse').textContent = vit;
+  document.getElementById('degats').textContent = dmg;
+}
+calculer();
+</script>
+</body>
+</html>
