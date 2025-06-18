@@ -86,7 +86,7 @@ body {
   font-family: 'Caudex', serif;
   margin: auto;
   width: 100%;
-  min-height: 205px;
+  min-height: 305px;
   padding: 10px;
   border-radius: 0 0 15px 15px;
   background: transparent;
