@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
+
+@font-face {
+  font-family: 'Perigord';
+  src: url('https://nymeris-bot.github.io/Duralas/Perigord.woff2') format('woff2'),
+       url('https://nymeris-bot.github.io/Duralas/Perigord.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Caudex', serif;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+.BDY {
+  margin: auto;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  line-height: 16px;
+  font-family: inherit;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 100px;
+}
+
+.BDY::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background: url('https://nymeris-bot.github.io/Duralas/Heat.png') no-repeat center center;
+  background-size: contain;
+  transform: rotate(35deg);
+  z-index: 1;
+  pointer-events: none;
+  animation: heartBeat 1.5s infinite;
+}
+
+.topBDY {
+  width: 100%;
+  height: 10px;
+}
+
+.splashBDY {
+  position: absolute;
+  z-index: 1;
+  margin-left: -65px;
+  margin-top: -15px;
+  width: 363px;
+  height: 259px;
+}
+
+.cdtBDY {
+  position: absolute;
+  z-index: 3;
+  margin-top: 120px;
+  margin-left: -140px;
+  transform: scale(0);
+  transition: transform ease-in-out 0.55s;
+}
+
+.BDY:hover .cdtBDY {
+  transform: scale(1);
+}
+
+.tleBDY {
+  font-family: 'Perigord', serif;
+  margin-top: -80px;
+  margin-bottom: -30px;
+  padding: 15px 0;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #f5deb3;
+}
+
+.msgBDY {
+  position: relative;
+  z-index: 1;
+  font-family: 'Caudex', serif;
+  margin: auto;
+  width: 100%;
+  min-height: 205px;
+  padding: 10px;
+  border-radius: 0 0 15px 15px;
+  background: transparent;
+  overflow: visible;
+  background: url('https://nymeris-bot.github.io/Duralas/Heart.png') center center no-repeat;
+  background-size: 120px;
+  animation: heartBeatBG 1.5s infinite;
+  font-size: 12px;
+  text-align: justify;
+  color: #f5deb3;
+}
+
+.msgBDY::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  background: url('https://nymeris-bot.github.io/Duralas/Heart.png') no-repeat center center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  opacity: 0.15;
+  pointer-events: none;
+  animation: heartBeat 1.5s infinite;
+  z-index: -1;
+}
+
+.msgBDY p {
+  text-indent: 30px;
+  margin: -0.3em 0;
+  position: relative;
+  z-index: 1;
+}
+
+.msgBDY p::first-letter {
+  text-transform: uppercase;
+  color: #660000;
+  font-family: 'Perigord', serif;
+  font-size: 22px;
+}
+
+.jawTopBDY,
+.jawBottomBDY {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  animation: fadeInJaw 1s ease both;
+}
+
+.jawTopBDY {
+  top: -60px;
+  animation-delay: 0.2s;
+}
+
+.jawBottomBDY {
+  bottom: -40px;
+  animation-delay: 0.5s;
+}
+
+.jawTopBDY img,
+.jawBottomBDY img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes fadeInJaw {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heartBeat {
+  0%   { transform: scale(1); }
+  20%  { transform: scale(1.08); }
+  40%  { transform: scale(0.95); }
+  60%  { transform: scale(1.05); }
+  80%  { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+
+@keyframes heartBeatBG {
+  0%   { background-size: 120px; }
+  20%  { background-size: 130px; }
+  40%  { background-size: 115px; }
+  60%  { background-size: 125px; }
+  80%  { background-size: 117px; }
+  100% { background-size: 120px; }
+}
+
+@media (max-width: 600px) {
+  .BDY {
+    width: 95%;
+    padding: 20px 10px;
+  }
+
+  .splashBDY,
+  .cdtBDY {
+    display: none;
+  }
+
+  .tleBDY {
+    font-size: 16px;
+  }
+
+  .msgBDY {
+    font-size: 11px;
+    padding: 8px;
+  }
+}
+
+.cadre-sang {
+  border: 3px solid #660000;
+  padding: 15px;
+  margin: 20px 0;
+  background-color: #000000;
+  box-shadow: 0 0 10px #990000, inset 0 0 5px #330000;
+  border-radius: 5px;
+}
