@@ -1,15 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
-
-@font-face {
-  font-family: 'Perigord';
-  src: url('https://nymeris-bot.github.io/Duralas/Perigord.woff2') format('woff2'),
-       url('https://nymeris-bot.github.io/Duralas/Perigord.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 body {
-  font-family: 'Caudex', serif;
+  font-family: 'Exo 2', serif;
   margin: 0;
   padding: 0;
   background: none;
@@ -25,21 +18,6 @@ body {
   position: relative;
   padding-top: 0;
   padding-bottom: 100px;
-}
-
-.BDY::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  background: url('https://nymeris-bot.github.io/Duralas/Heat.png') no-repeat center center;
-  background-size: contain;
-  transform: rotate(35deg);
-  z-index: 1;
-  pointer-events: none;
-  animation: heartBeat 1.5s infinite;
 }
 
 .topBDY {
@@ -70,7 +48,7 @@ body {
 }
 
 .tleBDY {
-  font-family: 'Perigord', serif;
+  font-family: 'Audiowide', serif;
   margin-top: -80px;
   margin-bottom: -30px;
   padding: 15px 0;
@@ -92,7 +70,6 @@ body {
   border-radius: 0 0 15px 15px;
   background: transparent;
   overflow: visible;
-  background: url('https://nymeris-bot.github.io/Duralas/Heart.png') center center no-repeat;
   background-size: 120px;
   animation: heartBeatBG 1.5s infinite;
   font-size: 12px;
@@ -108,7 +85,6 @@ body {
   left: 50%;
   width: 120px;
   height: 120px;
-  background: url('https://nymeris-bot.github.io/Duralas/Heart.png') no-repeat center center;
   background-size: contain;
   transform: translate(-50%, -50%);
   opacity: 0.15;
