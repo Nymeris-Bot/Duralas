@@ -1,0 +1,17 @@
+/* style.css */
+
+.start-gif, .end-gif {
+  display: block;
+  margin: 20px auto;
+  width: 120px;
+}
+
+p {
+  text-indent: 7ch;
+  margin-bottom: 16px;
+}
+
+p::first-letter {
+  color: skyblue;
+  font-weight: bold;
+}
