@@ -78,21 +78,6 @@ body {
   line-height: 20px;
 }
 
-.msgBDY::before {
-  content: "Exo 2";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  background-size: contain;
-  transform: translate(-50%, -50%);
-  opacity: 0.15;
-  pointer-events: none;
-  animation: heartBeat 1.5s infinite;
-  z-index: -1;
-}
-
 .msgBDY p {
   text-indent: 30px;
   margin: -0.3em 0;
