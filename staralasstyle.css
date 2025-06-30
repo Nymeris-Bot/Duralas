@@ -1,10 +1,13 @@
 /* style.css */
 
-.start-gif, .end-gif {
-  display: block;
-  margin: 20px auto;
-  width: 200px;    
-  height: auto;    
+.start-gif {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.end-gif {
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 p {
