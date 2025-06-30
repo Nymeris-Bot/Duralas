@@ -1,13 +1,17 @@
 /* style.css */
 
 .start-gif {
-  margin-top: 0;
-  margin-bottom: 10px;
+  display: block;
+  margin-top: -15;
+  margin-bottom: 5px;
+  height: auto;
 }
 
 .end-gif {
+  display: block;
   margin-top: 20px;
   margin-bottom: 0;
+  height: auto;
 }
 
 p {
