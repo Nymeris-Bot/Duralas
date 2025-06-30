@@ -79,7 +79,7 @@ body {
 }
 
 .msgBDY::before {
-  content: "";
+  content: "Exo 2";
   position: absolute;
   top: 50%;
   left: 50%;
