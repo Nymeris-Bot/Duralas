@@ -3,7 +3,8 @@
 .start-gif, .end-gif {
   display: block;
   margin: 20px auto;
-  width: 120px;
+  width: 200px;    
+  height: auto;    
 }
 
 p {
