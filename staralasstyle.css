@@ -61,7 +61,7 @@ body {
 .msgBDY {
   position: relative;
   z-index: 1;
-  font-family: ' 2', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   margin: auto;
   width: 95%;
   max-width: 100%;
