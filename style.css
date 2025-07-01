@@ -151,7 +151,7 @@ body {
   background: url('https://nymeris-bot.github.io/Duralas/Heart.png') center center no-repeat;
   background-size: 120px;
   animation: heartBeatBG 1.5s infinite;
-  font-size: 12px;
+  font-size: 15px;
   text-align: justify;
   color: #f5deb3;
 }
