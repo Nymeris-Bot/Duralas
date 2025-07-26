@@ -15,10 +15,7 @@
   font-family: 'BeaufortforLOLJa-Bold', sans-serif;
   overflow: visible;
   transition: transform 0.4s ease;
-  cursor: pointer;
 }
-
-.carte-tcg.KO {}
 
 .carte-tcg:hover {
   transform: scale(1.3);
@@ -32,6 +29,7 @@
   transition: filter 0.3s ease;
 }
 
+/* KO état */
 .carte-tcg.KO img {
   filter: grayscale(100%) brightness(0.4);
 }
@@ -97,37 +95,37 @@
   right: 25px;
 }
 
-/* === Overlay activé par :target === */
+/* === Overlay Infos === */
 .carte-overlay {
-  display: none;
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* fond noir transparent */
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 20px;
-  box-sizing: border-box;
   font-family: Arial, sans-serif;
   font-size: 14px;
-  z-index: 999;
-  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
+  z-index: 100;
 }
 
-#overlay-nymeris:target .carte-overlay {
+/* Affichage si .carte-tcg a le pseudo-ciblage :target */
+.carte-wrapper:target .carte-overlay {
   display: block;
 }
 
-/* Bouton de fermeture */
-.fermer-overlay {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 4px 8px;
-  border-radius: 4px;
-  z-index: 1000;
+/* Correction anti-scroll */
+.carte-wrapper::before {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Empêche le scroll à l'ancre */
+html:has(.carte-wrapper:target) {
+  scroll-behavior: auto;
 }
