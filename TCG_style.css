@@ -16,9 +16,8 @@
   overflow: visible;
   transition: transform 0.4s ease;
   cursor: pointer;
+  display: inline-block;
 }
-
-.carte-tcg.KO {}
 
 .carte-tcg:hover {
   transform: scale(1.3);
@@ -32,7 +31,7 @@
   transition: filter 0.3s ease;
 }
 
-/* KO : image en N&B + overlay rouge */
+/* KO overlay */
 .carte-tcg.KO img {
   filter: grayscale(100%) brightness(0.4);
 }
@@ -54,7 +53,7 @@
   z-index: 10;
 }
 
-/* === Cadres de stats === */
+/* === Stats === */
 .cadre {
   position: absolute;
   width: 40px;
@@ -82,23 +81,20 @@
   text-shadow: 0 0 0 black;
 }
 
-/* Position des stats */
 .vitesse {
   bottom: 0px;
   left: 25px;
 }
-
 .vitalité {
   bottom: -5px;
   left: 45%;
 }
-
 .dégâts {
   bottom: 0px;
   right: 25px;
 }
 
-/* === Overlay infos cliquable === */
+/* === Overlay activé au clic === */
 .carte-checkbox {
   display: none;
 }
@@ -109,7 +105,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* fond noir transparent */
+  background-color: rgba(0, 0, 0, 0.5); /* fond noir semi-transparent */
   color: white;
   font-size: 14px;
   font-family: Arial, sans-serif;
@@ -117,13 +113,9 @@
   box-sizing: border-box;
   display: none;
   z-index: 20;
+  overflow-y: auto;
 }
 
 .carte-checkbox:checked + .carte-tcg .carte-overlay {
   display: block;
 }
-
-.carte-overlay:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
