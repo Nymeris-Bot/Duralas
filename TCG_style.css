@@ -1,7 +1,7 @@
 .carte-tcg {
   position: relative;
   width: 380px;
-  height: 380px;
+  height: 560px; /* hauteur ajustée pour image complète */
   font-family: Arial, sans-serif;
 }
 
@@ -15,18 +15,18 @@
 
 .cadre {
   position: absolute;
-  bottom: 10px;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   text-shadow: 1px 1px 2px black;
   text-align: center;
-  line-height: 32px;
+  line-height: 24px;
   pointer-events: none;
 }
 
-.vitesse { left: 24px; }
-.vie   { left: 50%; transform: translateX(-50%); }
-.dégats  { right: 24px; }
+/* Positionnement précis sur les cadres colorés */
+.vitesse { bottom: 22px; left: 45px; }
+.vie   { bottom: 20px; left: 50%; transform: translateX(-50%); }
+.dégats  { bottom: 22px; right: 45px; }
