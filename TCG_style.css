@@ -86,17 +86,17 @@
 
 /* Position des stats */
 .vitesse {
-  bottom: 32px;
+  bottom: 37px;
   left: 25px;
 }
 
 .vitalité {
-  bottom: 25px;
+  bottom: 30px;
   left: 46%;
 }
 
 .dégâts {
-  bottom: 32px;
+  bottom: 37px;
   right: 25px;
 }
 
