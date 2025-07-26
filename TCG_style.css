@@ -71,14 +71,14 @@
   align-items: center;
   justify-content: center;
 
-  /* Anti-zoom sur hover */
+
   transform: scale(1);
   transition: transform 0.4s ease;
 }
 
-/* Inverser le zoom de la carte pour garder les stats constantes */
+
 .carte-tcg:hover .cadre {
-  transform: scale(0.769); /* ≈ 1 / 1.3 */
+  transform: scale(1); 
 }
 
 .cadre .valeur {
