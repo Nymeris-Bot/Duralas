@@ -79,16 +79,16 @@
 
 /* Placement des chiffres pour format 380x562 */
 .vitesse {
-  bottom: -10px;
+  bottom: -4px;
   left: 25px;
 }
 
 .vitalité {
-  bottom: -17px;
+  bottom: -9px;
   left: 45%;
 }
 
 .dégâts {
-  bottom: -10px;
+  bottom: -4px;
   right: 25px;
 }
