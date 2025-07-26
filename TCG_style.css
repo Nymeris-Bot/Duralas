@@ -15,6 +15,7 @@
   font-family: 'BeaufortforLOLJa-Bold', sans-serif;
   overflow: visible;
   transition: transform 0.4s ease;
+  cursor: pointer;
 }
 
 .carte-tcg.KO {}
@@ -65,7 +66,6 @@
   pointer-events: none;
   transition: transform 0.4s ease;
   font-family: 'BeaufortforLOLJa-Bold', sans-serif;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +82,7 @@
   text-shadow: 0 0 0 black;
 }
 
-/* Positionnement des stats */
+/* Position des stats */
 .vitesse {
   bottom: 0px;
   left: 25px;
@@ -98,50 +98,32 @@
   right: 25px;
 }
 
-/* === Spoiler CSS-only === */
-.spoiler-wrapper {
-  position: relative;
-  margin-top: 10px;
-}
-
-/* On cache la checkbox */
-.spoiler-checkbox {
+/* === Overlay infos cliquable === */
+.carte-checkbox {
   display: none;
 }
 
-/* Bouton visible */
-.spoiler-bouton {
-  background-color: #eee;
-  color: #000;
-  padding: 6px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  user-select: none;
-}
-
-.spoiler-bouton:hover {
-  background-color: #ccc;
-}
-
-/* Contenu masqué */
-.spoiler-box {
-  display: none;
-  margin-top: 8px;
-  padding: 8px;
-  background-color: #111;
+.carte-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* fond noir transparent */
   color: white;
-  border: 1px solid #333;
-  border-radius: 6px;
   font-size: 14px;
   font-family: Arial, sans-serif;
-  width: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
+  z-index: 20;
 }
 
-/* Affichage quand la case est cochée */
-.spoiler-checkbox:checked + .spoiler-bouton + .spoiler-box {
+.carte-checkbox:checked + .carte-tcg .carte-overlay {
   display: block;
 }
+
+.carte-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
