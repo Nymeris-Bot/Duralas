@@ -1,0 +1,32 @@
+.carte-tcg {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  font-family: Arial, sans-serif;
+}
+
+.carte-tcg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.cadre {
+  position: absolute;
+  bottom: 10px;
+  width: 32px;
+  height: 32px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  text-align: center;
+  line-height: 32px;
+  pointer-events: none;
+}
+
+.orange { left: 24px; }
+.vert   { left: 50%; transform: translateX(-50%); }
+.rouge  { right: 24px; }
