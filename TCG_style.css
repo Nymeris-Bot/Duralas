@@ -7,7 +7,18 @@
   font-style: normal;
 }
 
-/* === Carte TCG principale === */
+/* === Structure principale === */
+.carte-container {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.carte-checkbox {
+  display: none;
+}
+
 .carte-tcg {
   position: relative;
   width: 380px;
@@ -15,8 +26,6 @@
   font-family: 'BeaufortforLOLJa-Bold', sans-serif;
   overflow: visible;
   transition: transform 0.4s ease;
-  cursor: pointer;
-  display: inline-block;
 }
 
 .carte-tcg:hover {
@@ -31,29 +40,7 @@
   transition: filter 0.3s ease;
 }
 
-/* KO overlay */
-.carte-tcg.KO img {
-  filter: grayscale(100%) brightness(0.4);
-}
-
-.carte-tcg.KO::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  background-image: url('https://i.ibb.co/Kp82GJhw/cropped-hurraakerkko-KO-transparent-logo.webp');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: translate(-50%, -50%) rotate(-30deg);
-  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(0deg) brightness(0.7) contrast(1.5) drop-shadow(0 0 5px #660000);
-  pointer-events: none;
-  z-index: 10;
-}
-
-/* === Stats === */
+/* === Cadres de stats === */
 .cadre {
   position: absolute;
   width: 40px;
@@ -81,38 +68,38 @@
   text-shadow: 0 0 0 black;
 }
 
+/* === Position des chiffres === */
 .vitesse {
   bottom: 0px;
   left: 25px;
 }
+
 .vitalité {
   bottom: -5px;
   left: 45%;
 }
+
 .dégâts {
   bottom: 0px;
   right: 25px;
 }
 
-/* === Overlay activé au clic === */
-.carte-checkbox {
-  display: none;
-}
-
+/* === Overlay noir cliquable === */
 .carte-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* fond noir semi-transparent */
+  background-color: rgba(0, 0, 0, 0.55);
   color: white;
   font-size: 14px;
   font-family: Arial, sans-serif;
   padding: 20px;
   box-sizing: border-box;
   display: none;
-  z-index: 20;
+  z-index: 9999;
+  border-radius: 8px;
   overflow-y: auto;
 }
 
