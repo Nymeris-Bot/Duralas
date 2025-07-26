@@ -7,7 +7,7 @@
   font-style: normal;
 }
 
-/* Carte TCG */
+/* === Carte TCG principale === */
 .carte-tcg {
   position: relative;
   width: 380px;
@@ -15,7 +15,7 @@
   font-family: 'BeaufortforLOLJa-Bold', sans-serif;
   overflow: visible;
   transition: transform 0.4s ease;
-  display: inline-block;
+  cursor: pointer;
 }
 
 .carte-tcg:hover {
@@ -23,6 +23,10 @@
 }
 
 .carte-tcg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -30,7 +34,7 @@
   transition: filter 0.3s ease;
 }
 
-/* KO */
+/* KO : image en N&B + overlay rouge */
 .carte-tcg.KO img {
   filter: grayscale(100%) brightness(0.4);
 }
@@ -52,7 +56,7 @@
   z-index: 10;
 }
 
-/* Stats */
+/* === Cadres de stats === */
 .cadre {
   position: absolute;
   width: 40px;
@@ -80,6 +84,7 @@
   text-shadow: 0 0 0 black;
 }
 
+/* Position des stats */
 .vitesse {
   bottom: 0px;
   left: 25px;
@@ -95,27 +100,25 @@
   right: 25px;
 }
 
-/* === Overlay au hover === */
-.carte-overlay {
+/* === Overlay sur hover === */
+.carte-tcg .overlay-hover {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
+  padding: 40px 20px 20px 20px; /* top padding augmenté */
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  font-size: 14px;
-  z-index: 50;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  padding-top: 60px; /* Décale tout le contenu vers le bas */
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-y: auto;
+  display: none;
+  z-index: 15;
 }
 
-.carte-tcg:hover .carte-overlay {
-  opacity: 1;
-  pointer-events: auto;
+.carte-tcg:hover .overlay-hover {
+  display: block;
 }
