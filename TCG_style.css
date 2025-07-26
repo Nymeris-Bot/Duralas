@@ -96,3 +96,20 @@
   bottom: 0px;
   right: 25px;
 }
+
+.spoiler-box {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #111;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 6px;
+  width: 200px;
+  display: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.spoiler-box.visible {
+  display: block;
+}
