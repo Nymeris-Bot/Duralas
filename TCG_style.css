@@ -27,6 +27,6 @@
   pointer-events: none;
 }
 
-.orange { left: 24px; }
-.vert   { left: 50%; transform: translateX(-50%); }
-.rouge  { right: 24px; }
+.vitesse { left: 24px; }
+.vie   { left: 50%; transform: translateX(-50%); }
+.dégats  { right: 24px; }
