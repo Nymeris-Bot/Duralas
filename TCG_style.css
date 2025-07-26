@@ -38,6 +38,19 @@
 }
 
 /* Positionnement pour format carré (380x380) */
-.vitesse { bottom: 18px; left: 35px; }
-.vie     { bottom: 18px; left: 50%; transform: translateX(-50%); }
-.degats  { bottom: 18px; right: 35px; }
+.vitesse {
+  bottom: 36px;
+  left: 52px;
+}
+
+.vie {
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.degats {
+  bottom: 36px;
+  right: 52px;
+}
+
