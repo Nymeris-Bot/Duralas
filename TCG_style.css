@@ -7,25 +7,18 @@
   font-style: normal;
 }
 
-/* === Structure clic overlay === */
-.carte-container {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-}
-
-.carte-checkbox {
-  display: none;
-}
-
-/* === Carte principale === */
+/* === Carte TCG principale === */
 .carte-tcg {
   position: relative;
   width: 380px;
   height: 570px;
   font-family: 'BeaufortforLOLJa-Bold', sans-serif;
+  overflow: visible;
   transition: transform 0.4s ease;
+  cursor: pointer;
 }
+
+.carte-tcg.KO {}
 
 .carte-tcg:hover {
   transform: scale(1.3);
@@ -36,9 +29,31 @@
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+  transition: filter 0.3s ease;
 }
 
-/* === Stats === */
+.carte-tcg.KO img {
+  filter: grayscale(100%) brightness(0.4);
+}
+
+.carte-tcg.KO::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background-image: url('https://i.ibb.co/Kp82GJhw/cropped-hurraakerkko-KO-transparent-logo.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(0deg) brightness(0.7) contrast(1.5) drop-shadow(0 0 5px #660000);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* === Cadres de stats === */
 .cadre {
   position: absolute;
   width: 40px;
@@ -48,6 +63,8 @@
   color: white !important;
   text-shadow: 1px 1px 2px black;
   pointer-events: none;
+  transition: transform 0.4s ease;
+  font-family: 'BeaufortforLOLJa-Bold', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,32 +74,60 @@
   transform: scale(1.3);
 }
 
-.valeur {
+.cadre .valeur {
+  font-size: inherit;
+  font-weight: inherit;
   -webkit-text-stroke: 1px black;
   text-shadow: 0 0 0 black;
 }
 
-/* Positions */
-.vitesse { bottom: 0; left: 25px; }
-.vitalité { bottom: -5px; left: 45%; }
-.dégâts { bottom: 0; right: 25px; }
+/* Position des stats */
+.vitesse {
+  bottom: 0px;
+  left: 25px;
+}
 
-/* === Overlay affiché si coché === */
+.vitalité {
+  bottom: -5px;
+  left: 45%;
+}
+
+.dégâts {
+  bottom: 0px;
+  right: 25px;
+}
+
+/* === Overlay activé par :target === */
 .carte-overlay {
+  display: none;
   position: absolute;
   top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* fond noir transparent */
   color: white;
   padding: 20px;
   box-sizing: border-box;
-  display: none;
-  z-index: 999;
   font-family: Arial, sans-serif;
   font-size: 14px;
+  z-index: 999;
   border-radius: 8px;
 }
 
-.carte-checkbox:checked + .carte-tcg .carte-overlay {
+#overlay-nymeris:target .carte-overlay {
   display: block;
+}
+
+/* Bouton de fermeture */
+.fermer-overlay {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 1000;
 }
