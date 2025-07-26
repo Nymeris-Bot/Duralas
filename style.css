@@ -191,7 +191,7 @@ body {
   position: absolute;
   left: 0;
   width: 100%;
-  z-index: 11;
+  z-index: 0;
   animation: fadeInJaw 1s ease both;
 }
 
