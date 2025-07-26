@@ -34,7 +34,13 @@
   transition: transform 0.4s ease;
 }
 
+/* Quand on survole la carte, les chiffres s’agrandissent aussi */
+.carte-tcg:hover .cadre {
+  transform: scale(1.3);
+}
+
 /* Positionnement précis */
 .vitesse { bottom: 22px; left: 38px; }
 .vie     { bottom: 24px; left: 50%; transform: translateX(-50%); }
 .degats  { bottom: 22px; right: 34px; }
+
