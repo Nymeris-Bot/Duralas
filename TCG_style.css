@@ -112,6 +112,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  padding-top: 60px; /* Décale tout le contenu vers le bas */
 }
 
 .carte-tcg:hover .carte-overlay {
