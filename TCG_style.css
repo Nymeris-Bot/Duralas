@@ -1,7 +1,7 @@
 .carte-tcg {
   position: relative;
   width: 380px;
-  height: 380px;
+  height: 562px;
   font-family: Arial, sans-serif;
   overflow: visible; /* important pour le zoom */
   transition: transform 0.4s ease;
