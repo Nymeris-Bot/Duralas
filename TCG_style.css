@@ -59,8 +59,8 @@
 /* === Cadres de stats === */
 .cadre {
   position: absolute;
-  width: 40px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   font-weight: 600;
   font-size: 35px;
   color: white !important;
@@ -68,10 +68,12 @@
   pointer-events: none;
   font-family: 'BeaufortforLOLJa-Bold', sans-serif;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   transform: scale(1);
   transition: transform 0.4s ease;
+  line-height: 1;
 }
 
 .carte-tcg:hover .cadre {
@@ -80,27 +82,40 @@
 
 /* === Valeur principale === */
 .cadre .valeur {
-  font-size: inherit;
-  font-weight: inherit;
+  font-size: 30px;
+  font-weight: bold;
   -webkit-text-stroke: 1px black;
   text-shadow: 0 0 0 black;
+  margin-bottom: 0px;
 }
 
 /* === Modificateur visuel (-150, +80, etc.) === */
-.cadre .modif {
-  font-size: 16px;
-  font-weight: normal;
-  margin-left: 4px;
-  color: #aaa;
-}
-
-/* Couleur rouge si le texte commence par '-' */
-.cadre .modif:before {
+.cadre .modif::before {
   content: attr(data-modif);
-  color: inherit;
 }
 
-/* Position des stats */
+.cadre .modif {
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 1px;
+  color: #ccc;
+}
+
+/* Couleurs conditionnelles */
+.cadre .modif[data-modif^="-"] {
+  color: #cc4444;
+}
+.cadre .modif[data-modif^="+"] {
+  color: #44cc44;
+}
+
+/* Masquer le modif si vide */
+.cadre .modif:empty::before {
+  content: "";
+  display: none;
+}
+
+/* === Position des stats === */
 .vitesse {
   bottom: 37px;
   left: 25px;
