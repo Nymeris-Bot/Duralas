@@ -65,7 +65,7 @@
   font-weight: bold;
   font-size: 35px;
   color: white;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 2px 1px 2px black;
   pointer-events: none;
   display: flex;
   flex-direction: column;
@@ -77,11 +77,12 @@
 
 /* Valeur principale – centrée par défaut */
 .valeur {
-  font-size: 35px;
+  font-size: 34px;
   font-weight: bold;
   font-family: 'BeaufortforLOLJa-Bold', sans-serif;
   color: white !important;
-  text-shadow: 1px 1px 2px black;
+  -webkit-text-stroke: 0.2px black
+  
 }
 
 /* Solution 2 : ne remonte .valeur que si modif est non vide ET a un vrai contenu */
@@ -106,7 +107,7 @@
 
 /* === Position des stats === */
 .vitesse {
-  bottom: 30px;
+  bottom: 26px;
   left: 19px;
 }
 
@@ -116,7 +117,7 @@
 }
 
 .dégâts {
-  bottom: 27px;
+  bottom: 26px;
   right: 19px;
 }
 
