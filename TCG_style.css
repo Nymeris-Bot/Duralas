@@ -70,22 +70,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-
   transform: scale(1);
   transition: transform 0.4s ease;
 }
-
 
 .carte-tcg:hover .cadre {
   transform: scale(1); 
 }
 
+/* === Valeur principale === */
 .cadre .valeur {
   font-size: inherit;
   font-weight: inherit;
   -webkit-text-stroke: 1px black;
   text-shadow: 0 0 0 black;
+}
+
+/* === Modificateur visuel (-150, +80, etc.) === */
+.cadre .modif {
+  font-size: 16px;
+  font-weight: normal;
+  margin-left: 4px;
+  color: #aaa;
+}
+
+/* Couleur rouge si le texte commence par '-' */
+.cadre .modif:before {
+  content: attr(data-modif);
+  color: inherit;
 }
 
 /* Position des stats */
@@ -113,7 +125,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 60px 20px 20px 20px; /* plus d’espace en haut */
+  padding: 60px 20px 20px 20px;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
   font-size: 15px;
