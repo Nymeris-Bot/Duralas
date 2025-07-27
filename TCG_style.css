@@ -76,11 +76,11 @@
 
 /* Valeur principale – centrée par défaut */
 .valeur {
-  font-size: inherit;
-  font-weight: inherit;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: 'BeaufortforLOLJa-Bold', sans-serif;
   -webkit-text-stroke: 1px black;
   text-shadow: 0 0 0 black;
-  transform: translateY(0);
 }
 
 /* Solution 2 : ne remonte .valeur que si modif est non vide ET a un vrai contenu */
