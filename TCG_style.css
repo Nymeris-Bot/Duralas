@@ -62,7 +62,7 @@
   width: 50px;
   height: 50px;
   font-family: 'BeaufortforLOLJa-Bold', sans-serif;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 35px;
   color: white;
   text-shadow: 1px 1px 2px black;
@@ -72,6 +72,7 @@
   align-items: center;
   justify-content: center;
   line-height: 1;
+  color: white !important;
 }
 
 /* Valeur principale – centrée par défaut */
@@ -80,8 +81,7 @@
   font-weight: bold;
   font-family: 'BeaufortforLOLJa-Bold', sans-serif;
   color: white !important;
-  -webkit-text-stroke: 1px black;
-  text-shadow: 0 0 0 black;
+  text-shadow: 1px 1px 2px black;
 }
 
 /* Solution 2 : ne remonte .valeur que si modif est non vide ET a un vrai contenu */
@@ -92,7 +92,8 @@
 /* Modificateur visuel */
 .modif {
   font-size: 18px;
-  margin-top: -15px;
+  margin-top: -40px;
+  
   color: white;
   line-height: 1;
 }
@@ -105,18 +106,18 @@
 
 /* === Position des stats === */
 .vitesse {
-  bottom: 37px;
-  left: 25px;
+  bottom: 30px;
+  left: 19px;
 }
 
 .vitalité {
-  bottom: 32px;
-  left: 46%;
+  bottom: 24px;
+  left: 45%;
 }
 
 .dégâts {
-  bottom: 37px;
-  right: 25px;
+  bottom: 27px;
+  right: 19px;
 }
 
 /* === Overlay sur hover === */
