@@ -49,7 +49,7 @@
 .ny-carte-front {
   z-index: 2;
   background: transparent;
-  pointer-events: none !important;   /* Désactive l'interaction sur le recto */
+  pointer-events: none !important;
 }
 .ny-carte-back {
   transform: rotateY(180deg);
@@ -78,7 +78,6 @@
 .ny-back-content {
   position: relative;
   z-index: 2;
-  color: #ffd700;
   text-align: center;
   padding: 8px 12px 480px 12px;
   width: 100%;
@@ -87,14 +86,13 @@
 }
 
 .ny-back-content h3 {
-  font-family: 'Cinzel', serif;
+  font-family: 'BeaufortforLOLJa-Bold', serif;
   font-size: 22px;
   margin: 0 0 10px 0;
   color: #ffd700;
   text-shadow: 2px 2px 6px #000;
 }
 .ny-back-content p {
-  color: #fff;
   font-size: 15px;
   margin: 0;
   text-shadow: 1px 1px 4px #000;
@@ -115,8 +113,8 @@
   z-index: 20;
   box-shadow: 0 4px 18px #000a;
   display: none;
-  max-height: 540px;        /* <-- Ajout scroll vertical */
-  overflow-y: auto;         /* <-- Ajout scroll vertical */
+  max-height: 540px;
+  overflow-y: auto;
 }
 .ny-carte-back:hover .ny-overlay-back {
   display: block;
@@ -130,7 +128,23 @@
   margin: 0;
   padding: 0;
 }
-/* Scrollbar style optionnel (masquer ou custom) */
+
+/* Correction : taille du texte dans les spoilers (overlay dos carte) */
+.ny-overlay-back .spoiler_content,
+.ny-overlay-back .spoiler-content,
+.ny-overlay-back .spoiler {
+  font-size: 18px !important;
+  line-height: 1.2;
+}
+
+/* Bonus : Titre du spoiler plus visible */
+.ny-overlay-back .spoiler_title,
+.ny-overlay-back .spoiler-title {
+  font-size: 17px !important;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 4px;
+}
 
 .ny-overlay-back::-webkit-scrollbar {
   width: 8px;
@@ -140,7 +154,6 @@
   background: #ffd70066;
   border-radius: 8px;
 }
-
 
 /* Edition - Forum Dùralas en bas du dos */
 .ny-edition {
@@ -163,7 +176,6 @@
 .ny-flip-checkbox:checked + .ny-carte-flip {
   transform: rotateY(180deg);
 }
-/* Sur mobile, désactive hover */
 @media (hover: none) and (pointer: coarse) {
   .ny-carte-tcg:hover .ny-carte-flip {
     transform: none;
