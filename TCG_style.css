@@ -244,6 +244,11 @@
 .ny-carte-tcg.ny-carte-compagnon .vitalité  { bottom: 36px; left: 44%; }
 .ny-carte-tcg.ny-carte-compagnon .dégâts    { bottom: 36px; right: 19px; }
 
+.ny-carte-tcg.ny-carte-boss .numero    { top: 25px; left: 19px; }
+.ny-carte-tcg.ny-carte-boss .vitesse   { bottom: 30px; left: 19px; }
+.ny-carte-tcg.ny-carte-boss .vitalité  { bottom: 30px; left: 43%; }
+.ny-carte-tcg.ny-carte-boss .dégâts    { bottom: 30px; right: 19px; }
+
 .ny-carte-tcg.ny-carte-big .vitesse   { top: 234px; left: 27px; }
 .ny-carte-tcg.ny-carte-big .vitalité  { top: 234px; left: 43%; }
 .ny-carte-tcg.ny-carte-big .dégâts    { top: 234px; right: 27px; }
@@ -252,7 +257,7 @@
 .ny-carte-tcg.ny-carte-small .vitesse   { bottom: 16px; left: 29px; }
 .ny-carte-tcg.ny-carte-small .vitalité  { bottom: 16px; left: 43%; }
 .ny-carte-tcg.ny-carte-small .dégâts    { bottom: 16px; right: 29px; }
-.ny-carte-tcg.ny-carte-small .numero    { bottom: 16px; right: 29px; }
+.ny-carte-tcg.ny-carte-small .numero    { top: 24px; left: 21px; }
 /* KO : image en N&B + overlay rouge */
 .ny-carte-tcg.KO .ny-carte-front img {
   filter: grayscale(100%) brightness(0.4);
