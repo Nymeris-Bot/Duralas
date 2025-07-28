@@ -238,9 +238,9 @@
 .ny-numero { top: 25px; left: 19px; }
 
 .ny-carte-tcg.ny-carte-compagnon .ny-vitesse   { bottom: 36px; left: 19px; }
-.ny-carte-tcg.ny-carte-compagnon .vitalité  { bottom: 36px; left: 44%; }
+.ny-carte-tcg.ny-carte-compagnon .ny-vitalité  { bottom: 36px; left: 44%; }
 .ny-carte-tcg.ny-carte-compagnon .ny-dégâts    { bottom: 36px; right: 19px; }
-.ny-carte-tcg.ny-carte-compagnon .ny-numero    { top: 25px; left: 19px; }
+.ny-carte-tcg.ny-carte-compagnon .ny-numero    { top: 18px; left: 19px; }
 
 .ny-carte-tcg.ny-carte-boss .ny-vitesse   { bottom: 30px; left: 19px; }
 .ny-carte-tcg.ny-carte-boss .ny-vitalité  { bottom: 30px; left: 43%; }
@@ -314,7 +314,6 @@
   border-radius: 8px;
   display: block;
 }
-
 
 
 
