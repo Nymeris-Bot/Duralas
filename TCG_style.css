@@ -32,7 +32,7 @@
 }
 
 /* Clic (mobile) */
-#flip-mobile:checked + .carte-tcg .carte-inner {
+#flip-on-mobile:checked + .carte-tcg .carte-inner {
   transform: rotateY(180deg);
 }
 
@@ -138,7 +138,7 @@
 }
 
 /* === Zone cliquable mobile === */
-label[for="flip-mobile"] {
+label[for="flip-on-mobile"] {
   display: block;
   width: 380px;
   height: 570px;
