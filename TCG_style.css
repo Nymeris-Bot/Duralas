@@ -113,7 +113,7 @@
   background: rgba(0, 0, 0, 0.85);
   padding: 14px 12px;
   border-radius: 0px;
-  text-align: auto;
+  text-align: left;
   font-size: 18px;
   z-index: 20;
   box-shadow: 0 4px 18px #000a;
@@ -303,7 +303,6 @@
   border-radius: 8px;
   display: block;
 }
-
 
 
 
