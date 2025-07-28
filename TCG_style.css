@@ -8,7 +8,7 @@
 }
 
 /* === Carte TCG principale === */
-.carte-tcg {
+.ny-carte-tcg {
   position: relative;
   width: 380px;
   height: 570px;
@@ -18,11 +18,11 @@
   cursor: pointer;
 }
 
-.carte-tcg:hover {
+.ny-carte-tcg:hover {
   transform: scale(1.3);
 }
 
-.carte-tcg img {
+.ny-carte-tcg img {
   position: absolute;
   top: 0;
   left: 0;
@@ -35,11 +35,11 @@
 }
 
 /* KO : image en N&B + overlay rouge */
-.carte-tcg.KO img {
+.ny-carte-tcg.KO img {
   filter: grayscale(100%) brightness(0.4);
 }
 
-.carte-tcg.KO::after {
+.ny-carte-tcg.KO::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -57,7 +57,7 @@
 }
 
 /* === Cadres de stats === */
-.cadre {
+.ny-cadre {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -76,53 +76,51 @@
 }
 
 /* Valeur principale – centrée par défaut */
-.valeur {
+.ny-valeur {
   font-size: 34px;
   font-weight: bold;
   font-family: 'BeaufortforLOLJa-Bold', sans-serif;
   color: white !important;
-  -webkit-text-stroke: 0.2px black
-  
+  -webkit-text-stroke: 0.2px black;
 }
 
 /* Solution 2 : ne remonte .valeur que si modif est non vide ET a un vrai contenu */
-.valeur + .modif:not(:empty):not([data-modif=""]) {
+.ny-valeur + .ny-modif:not(:empty):not([data-modif=""]) {
   transform: translateY(10px);
 }
 
 /* Modificateur visuel */
-.modif {
+.ny-modif {
   font-size: 18px;
   margin-top: -40px;
-  
   color: white;
   line-height: 1;
 }
 
 /* Ne rien afficher si vide */
-.modif:empty::before {
+.ny-modif:empty::before {
   content: "";
   display: none;
 }
 
 /* === Position des stats === */
-.vitesse {
+.ny-vitesse {
   bottom: 26px;
   left: 19px;
 }
 
-.vitalité {
+.ny-vitalité {
   bottom: 24px;
   left: 45%;
 }
 
-.dégâts {
+.ny-dégâts {
   bottom: 26px;
   right: 19px;
 }
 
 /* === Overlay sur hover === */
-.carte-tcg .overlay-hover {
+.ny-carte-tcg .ny-overlay-hover {
   position: absolute;
   top: 0;
   left: 0;
@@ -140,6 +138,7 @@
   z-index: 15;
 }
 
-.carte-tcg:hover .overlay-hover {
+.ny-carte-tcg:hover .ny-overlay-hover {
   display: block;
 }
+
