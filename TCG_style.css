@@ -163,8 +163,6 @@
   color: #ffffff;
 }
 
-
-
 /* Edition - Forum Dùralas en bas du dos */
 .ny-edition {
   position: absolute;
@@ -189,6 +187,13 @@
 @media (hover: none) and (pointer: coarse) {
   .ny-carte-tcg:hover .ny-carte-flip {
     transform: none;
+  }
+  .ny-carte-back .ny-overlay-back {
+    display: block !important;
+    width: 80vw !important;
+    left: 10vw !important;
+    transform: none !important;
+    max-width: 320px;
   }
 }
 
@@ -285,7 +290,6 @@
   z-index: 10;
 }
 
-
 .ny-carte-tcg.DEAD .ny-carte-front::after {
   content: "";
   position: absolute;
@@ -302,9 +306,6 @@
   z-index: 10;
 }
 
-
-
-
 /* Pour images recto/verso */
 .ny-carte-front img,
 .ny-carte-back img {
@@ -314,6 +315,43 @@
   border-radius: 8px;
   display: block;
 }
+
+/* === BOUTON "RETOURNER" SOUS CARTE MOBILE === */
+.ny-flip-btn-outer {
+  display: none;
+  margin: 1px 0 0 90px;
+  right: auto;
+  leftt: 0;
+  padding: 10px 28px;
+  background: #191717;
+  color: #ffd700;
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  font-size: 20px;
+  font-family: 'BeaufortforLOLJa-Bold', Cinzel, serif;
+  box-shadow: 0 2px 12px #000a;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  width: max-content;
+  position: relative;
+}
+.ny-flip-btn-outer:active {
+  background: #ffd700;
+  color: #191717;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .ny-flip-btn-outer {
+    display: block;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .ny-flip-btn-outer {
+    display: none;
+  }
+}
+
 
 
 
