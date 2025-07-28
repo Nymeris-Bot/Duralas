@@ -104,18 +104,19 @@
 .ny-overlay-back {
   position: absolute;
   left: 50%;
-  bottom: 56px;
-  width: 260px;
+  bottom: 12px;
+  width: 360px;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.85);
-  color: #ffd700;
   padding: 14px 12px;
-  border-radius: 16px;
-  text-align: center;
-  font-size: 16px;
+  border-radius: 0px;
+  text-align: auto;
+  font-size: 18px;
   z-index: 20;
   box-shadow: 0 4px 18px #000a;
   display: none;
+  max-height: 540px;        /* <-- Ajout scroll vertical */
+  overflow-y: auto;         /* <-- Ajout scroll vertical */
 }
 .ny-carte-back:hover .ny-overlay-back {
   display: block;
@@ -129,8 +130,19 @@
   margin: 0;
   padding: 0;
 }
+/* Scrollbar style optionnel (masquer ou custom) */
+
+.ny-overlay-back::-webkit-scrollbar {
+  width: 8px;
+  background: #2d2d2d;
+}
+.ny-overlay-back::-webkit-scrollbar-thumb {
+  background: #ffd70066;
+  border-radius: 8px;
+}
 
 
+/* Edition - Forum Dùralas en bas du dos */
 .ny-edition {
   position: absolute;
   left: 0;
@@ -192,7 +204,6 @@
   color: white;
   line-height: 1;
 }
-
 .ny-modif:empty::before {
   content: "";
   display: none;
