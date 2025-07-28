@@ -235,9 +235,9 @@
   right: 19px;
 }
 
-.ny-carte-tcg.ny-carte-mob .vitesse   { bottom: 30px; left: 12px; }
-.ny-carte-tcg.ny-carte-mob .vitalité  { bottom: 12px; left: 36%; }
-.ny-carte-tcg.ny-carte-mob .dégâts    { bottom: 12px; right: 12px; }
+.ny-carte-tcg.ny-carte-mob .vitesse   { bottom: 34px; left: 19px; }
+.ny-carte-tcg.ny-carte-mob .vitalité  { bottom: 34px; left: 44%; }
+.ny-carte-tcg.ny-carte-mob .dégâts    { bottom: 34px; right: 19px; }
 
 /* KO : image en N&B + overlay rouge */
 .ny-carte-tcg.KO .ny-carte-front img {
@@ -269,6 +269,8 @@
   border-radius: 8px;
   display: block;
 }
+}
+
 
 
 
