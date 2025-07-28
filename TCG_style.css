@@ -10,7 +10,7 @@
 /* === Carte TCG : conteneur extérieur === */
 .carte-tcg {
   width: 380px;
-  height: 570px;
+  height: 571px;
   perspective: 1200px;
   margin: auto;
   position: relative;
