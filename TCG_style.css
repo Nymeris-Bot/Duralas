@@ -249,6 +249,11 @@
 .ny-carte-tcg.ny-carte-boss .vitalité  { bottom: 30px; left: 43%; }
 .ny-carte-tcg.ny-carte-boss .dégâts    { bottom: 30px; right: 19px; }
 
+.ny-carte-tcg.ny-carte-archiboss .vitesse   { bottom: 42px; left: 23px; }
+.ny-carte-tcg.ny-carte-archiboss .vitalité  { bottom: 42px; left: 43%; }
+.ny-carte-tcg.ny-carte-archiboss .dégâts    { bottom: 42px; right: 23px; }
+.ny-carte-tcg.ny-carte-archiboss .numero    { top: 26px; left: 24px; }
+
 .ny-carte-tcg.ny-carte-big .vitesse   { top: 234px; left: 27px; }
 .ny-carte-tcg.ny-carte-big .vitalité  { top: 234px; left: 43%; }
 .ny-carte-tcg.ny-carte-big .dégâts    { top: 234px; right: 27px; }
@@ -258,6 +263,7 @@
 .ny-carte-tcg.ny-carte-small .vitalité  { bottom: 16px; left: 43%; }
 .ny-carte-tcg.ny-carte-small .dégâts    { bottom: 16px; right: 29px; }
 .ny-carte-tcg.ny-carte-small .numero    { top: 24px; left: 21px; }
+
 /* KO : image en N&B + overlay rouge */
 .ny-carte-tcg.KO .ny-carte-front img {
   filter: grayscale(100%) brightness(0.4);
