@@ -234,8 +234,8 @@
 
 .ny-carte-tcg.ny-carte-compagnon .ny-vitesse   { bottom: 36px; left: 19px; }
 .ny-carte-tcg.ny-carte-compagnon .vitalité  { bottom: 36px; left: 44%; }
-.ny-carte-tcg.ny-carte-compagnon .dégâts    { bottom: 36px; right: 19px; }
-.ny-carte-tcg.ny-carte-compagnon .numero    { top: 25px; left: 19px; }
+.ny-carte-tcg.ny-carte-compagnon .ny-dégâts    { bottom: 36px; right: 19px; }
+.ny-carte-tcg.ny-carte-compagnon .ny-numero    { top: 25px; left: 19px; }
 
 .ny-carte-tcg.ny-carte-boss .ny-vitesse   { bottom: 30px; left: 19px; }
 .ny-carte-tcg.ny-carte-boss .ny-vitalité  { bottom: 30px; left: 43%; }
@@ -250,7 +250,7 @@
 .ny-carte-tcg.ny-carte-big .ny-vitesse   { top: 234px; left: 27px; }
 .ny-carte-tcg.ny-carte-big .ny-vitalité  { top: 234px; left: 43%; }
 .ny-carte-tcg.ny-carte-big .ny-dégâts    { top: 234px; right: 27px; }
-.ny-carte-tcg.ny-carte-big .numero    { top: 24px; left: 21px; }
+.ny-carte-tcg.ny-carte-big .ny-numero    { top: 24px; left: 21px; }
 
 .ny-carte-tcg.ny-carte-small .ny-vitesse   { bottom: 16px; left: 29px; }
 .ny-carte-tcg.ny-carte-small .ny-vitalité  { bottom: 16px; left: 43%; }
