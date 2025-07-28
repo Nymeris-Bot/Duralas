@@ -265,9 +265,11 @@
 .ny-carte-tcg.ny-carte-small .numero    { top: 24px; left: 21px; }
 
 /* KO : image en N&B + overlay rouge */
-.ny-carte-tcg.KO .ny-carte-front img {
+.ny-carte-tcg.KO .ny-carte-front img,
+.ny-carte-tcg.DEAD .ny-carte-front img {
   filter: grayscale(100%) brightness(0.4);
 }
+
 .ny-carte-tcg.KO .ny-carte-front::after {
   content: "";
   position: absolute;
@@ -285,23 +287,23 @@
   z-index: 10;
 }
 
-}
+
 .ny-carte-tcg.DEAD .ny-carte-front::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300px;
-  height: 300px;
-  background-image: url(' https://i.ibb.co/SXrQMsbx/pngimg-com-death-PNG22.png');
+  width: 550px;
+  height: 550px;
+  background-image: url('https://i.ibb.co/SXrQMsbx/pngimg-com-death-PNG22.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  transform: translate(-50%, -50%) rotate(-30deg);
-  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(0deg) brightness(0.7) contrast(1.5) drop-shadow(0 0 5px #660000);
+  transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 12;
+  z-index: 10;
 }
+
 
 
 
@@ -314,6 +316,9 @@
   border-radius: 8px;
   display: block;
 }
+
+
+
 
 
 
