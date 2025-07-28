@@ -17,7 +17,7 @@
   display: inline-block;
 }
 
-/* Flip checkbox cachée */
+/* Flip */
 .ny-flip-checkbox {
   display: none;
 }
@@ -61,10 +61,10 @@
   position: relative;
   padding: 0;
   overflow: hidden;
-  pointer-events: auto !important;   /* Active le hover sur le verso */
+  pointer-events: auto !important;
 }
 
-/* Image de dos en plein format */
+/* Image de dos */
 .ny-back-img {
   position: absolute;
   width: 100%;
@@ -75,13 +75,12 @@
   border-radius: 8px;
 }
 
-/* Texte centré et lisible sur l'image */
 .ny-back-content {
   position: relative;
   z-index: 2;
   color: #ffd700;
   text-align: center;
-  padding: 8px 12px 480px 12px; /* haut, droite, bas, gauche */
+  padding: 8px 12px 480px 12px;
   width: 100%;
   text-shadow: 2px 2px 6px #000, 0 0 3px #000;
   pointer-events: none;
@@ -101,7 +100,7 @@
   text-shadow: 1px 1px 4px #000;
 }
 
-/* === Overlay infos/capacité au dos (hover arrière) === */
+/* === Overlay infos/capacité au dos === */
 .ny-overlay-back {
   position: absolute;
   left: 50%;
@@ -131,7 +130,7 @@
   padding: 0;
 }
 
-/* Edition - Forum Dùralas en bas du dos */
+
 .ny-edition {
   position: absolute;
   left: 0;
