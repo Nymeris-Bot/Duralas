@@ -200,15 +200,15 @@
 }
 
 /* === Position des stats === */
-.ny-vitesse {
+.vitesse {
   bottom: 30px;
   left: 19px;
 }
-.ny-vitalité {
+.vitalité {
   bottom: 30px;
   left: 44%;
 }
-.ny-dégâts {
+.dégâts {
   bottom: 30px;
   right: 19px;
 }
@@ -243,5 +243,8 @@
   border-radius: 8px;
   display: block;
 }
+
+
+
 
 
