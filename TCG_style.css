@@ -227,39 +227,32 @@
 }
 
 /* === Position des stats === */
-.vitesse {
-  bottom: 30px;
-  left: 19px;
-}
-.vitalité {
-  bottom: 30px;
-  left: 44%;
-}
-.dégâts {
-  bottom: 30px;
-  right: 19px;
-}
+.ny-vitesse { bottom: 30px; left: 19px; }
+.ny-vitalité { bottom: 30px; left: 44%; }
+.ny-dégâts { bottom: 30px; right: 19px; }
+.ny-numero { top: 25px; left: 19px; }
 
-.ny-carte-tcg.ny-carte-compagnon .vitesse   { bottom: 36px; left: 19px; }
+.ny-carte-tcg.ny-carte-compagnon .ny-vitesse   { bottom: 36px; left: 19px; }
 .ny-carte-tcg.ny-carte-compagnon .vitalité  { bottom: 36px; left: 44%; }
 .ny-carte-tcg.ny-carte-compagnon .dégâts    { bottom: 36px; right: 19px; }
+.ny-carte-tcg.ny-carte-compagnon .numero    { top: 25px; left: 19px; }
 
-.ny-carte-tcg.ny-carte-boss .numero    { top: 25px; left: 19px; }
-.ny-carte-tcg.ny-carte-boss .vitesse   { bottom: 30px; left: 19px; }
+.ny-carte-tcg.ny-carte-boss .ny-vitesse   { bottom: 30px; left: 19px; }
 .ny-carte-tcg.ny-carte-boss .vitalité  { bottom: 30px; left: 43%; }
 .ny-carte-tcg.ny-carte-boss .dégâts    { bottom: 30px; right: 19px; }
+.ny-carte-tcg.ny-carte-boss .numero    { top: 25px; left: 19px; }
 
-.ny-carte-tcg.ny-carte-archiboss .vitesse   { bottom: 42px; left: 23px; }
+.ny-carte-tcg.ny-carte-archiboss .ny-vitesse   { bottom: 42px; left: 23px; }
 .ny-carte-tcg.ny-carte-archiboss .vitalité  { bottom: 44px; left: 43%; }
 .ny-carte-tcg.ny-carte-archiboss .dégâts    { bottom: 42px; right: 23px; }
 .ny-carte-tcg.ny-carte-archiboss .numero    { top: 26px; left: 24px; }
 
-.ny-carte-tcg.ny-carte-big .vitesse   { top: 234px; left: 27px; }
+.ny-carte-tcg.ny-carte-big .ny-vitesse   { top: 234px; left: 27px; }
 .ny-carte-tcg.ny-carte-big .vitalité  { top: 234px; left: 43%; }
 .ny-carte-tcg.ny-carte-big .dégâts    { top: 234px; right: 27px; }
 .ny-carte-tcg.ny-carte-big .numero    { top: 24px; left: 21px; }
 
-.ny-carte-tcg.ny-carte-small .vitesse   { bottom: 16px; left: 29px; }
+.ny-carte-tcg.ny-carte-small .ny-vitesse   { bottom: 16px; left: 29px; }
 .ny-carte-tcg.ny-carte-small .vitalité  { bottom: 16px; left: 43%; }
 .ny-carte-tcg.ny-carte-small .dégâts    { bottom: 16px; right: 29px; }
 .ny-carte-tcg.ny-carte-small .numero    { top: 24px; left: 21px; }
