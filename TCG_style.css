@@ -7,34 +7,30 @@
   font-style: normal;
 }
 
-/* === Conteneur principal isolé === */
+.ny-flip-zone {
+  width: 380px;
+  height: 570px;
+  margin: auto;
+  position: relative;
+  user-select: none;
+}
+
 .ny-carte-container {
   width: 380px;
-  height: 571px;
+  height: 570px;
   perspective: 1200px;
+  font-family: 'BeaufortforLOLJa-Bold', serif;
   position: relative;
-  font-family: 'BeaufortforLOLJa-Bold', sans-serif;
-  margin: auto;
 }
 
-/* === Carte intérieure (flip) === */
 .ny-carte-inner {
-  position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.8s;
+  transition: transform 0.8s cubic-bezier(.23,1.04,.63,.96);
   transform-style: preserve-3d;
+  position: relative;
 }
 
-.ny-carte-container:hover .ny-carte-inner {
-  transform: rotateY(180deg);
-}
-
-#flip-mobile:checked + .ny-carte-container .ny-carte-inner {
-  transform: rotateY(180deg);
-}
-
-/* === Faces avant/arrière === */
 .ny-carte-face,
 .ny-carte-back {
   position: absolute;
@@ -55,16 +51,15 @@
 
 .ny-carte-back {
   transform: rotateY(180deg);
-  background-color: black;
+  background: #000;
 }
 
-/* === Overlay de dos === */
 .ny-overlay-back {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
   color: #ffd700;
   font-family: Arial, sans-serif;
   font-size: 15px;
@@ -92,23 +87,10 @@
   line-height: 1;
 }
 
-/* Positions */
-.vitesse {
-  bottom: 26px;
-  left: 19px;
-}
+.ny-vitesse   { bottom: 26px; left: 19px; }
+.ny-vitalité  { bottom: 24px; left: 45%; }
+.ny-dégâts    { bottom: 26px; right: 19px; }
 
-.vitalité {
-  bottom: 24px;
-  left: 45%;
-}
-
-.dégâts {
-  bottom: 26px;
-  right: 19px;
-}
-
-/* Valeur principale */
 .ny-valeur {
   font-size: 34px;
   font-weight: bold;
@@ -116,32 +98,45 @@
   font-family: 'BeaufortforLOLJa-Bold', sans-serif;
   -webkit-text-stroke: 0.2px black;
 }
-
-/* Modificateur */
 .ny-modif {
   font-size: 18px;
   margin-top: -40px;
   color: white;
   line-height: 1;
 }
-
 .ny-modif:empty::before {
   content: "";
   display: none;
 }
-
 .ny-valeur + .ny-modif:not(:empty):not([data-modif=""]) {
   transform: translateY(10px);
 }
 
-/* === Zone cliquable mobile === */
-label[for="flip-mobile"] {
-  display: block;
+/* ==== FLIP === */
+.ny-carte-container:hover .ny-carte-inner,
+#ny-flip-mobile:checked + .ny-carte-container .ny-carte-inner {
+  transform: rotateY(180deg);
+}
+
+/* Zone label (mobile) */
+label[for="ny-flip-mobile"] {
+  display: none;
+  position: absolute;
   width: 380px;
   height: 570px;
-  position: absolute;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 22;
   cursor: pointer;
 }
+
+/* Mobile : afficher le label pour le clic */
+@media (hover: none) and (pointer: coarse) {
+  label[for="ny-flip-mobile"] {
+    display: block;
+  }
+  .ny-carte-container:hover .ny-carte-inner {
+    transform: none; /* Désactive hover sur mobile */
+  }
+}
+
